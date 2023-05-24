@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- 부트스트랩  -->
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' rel='stylesheet'>
+
+</head>
+
+<body class="sign-up-body">
+    <!-- 배경화면 동영상 태그 -->
+    <video id="sign-up-video" muted autoplay loop>
+        <source src="https://www.desktophut.com/files/1654788099-1654788099-pc-futuristic-game-room-1-live-wallpaper-free.mp4" type="video/mp4"
+            type=" video/mp4">
+    </video>
+    <div class="sign-up-text">
+        <!-- 동영상 태그 끝 -->
+        <h2 class="sign-up-h2">회원가입</h2>
+        <div class="sign-up-container">
+            <div class="form">
+                <!-- <h4 class="mb-3">회원가입</h4> -->
+                <form id="joinForm" onsubmit="return paintCongratulation()">
+                    <div class="row">
+                        <div class="col-md-6 mb-2">
+                            <label for="name">이름</label>
+                            <input type="text" class="form-control" id="name" placeholder="" value="" required>
+                            <div class="invalid-feedback">
+                                이름을 입력해주세요.
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-2">
+                            <label for="nickname">닉네임</label>
+                            <input type="text" class="form-control" id="nickname" placeholder="" value="" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-2">
+                            <label for="password">비밀번호</label>
+                            <input type="password" class="form-control" id="password" placeholder="" value="" required>
+                            <div class="invalid-feedback">
+                                비밀번호를 입력해주세요.
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-2">
+                            <label for="password_check">비밀번호 확인</label>
+                            <input type="password" class="form-control" id="nickname" placeholder="" value="" required>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-2">
+                            <label for="name">생년월일</label>
+                            <input type="date" class="form-control" id="name" placeholder="" value="" required>
+                            <div class="invalid-feedback">
+                                이름을 입력해주세요.
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-2">
+                            <label for="gender">성별</label>
+                            <div class="gender">
+                                <div class="man"><input type="radio" name="gender">&nbsp;남</div>
+                                <div class="woman"><input type="radio" name="gender">&nbsp;여</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+
+                            <div class="row">
+                            
+                            <div class="col-md-3 mb-3">
+                              <label for="root">전화번호</label>
+                              <select class="form-control " id="root">
+                                <option value=""></option>
+                                <option>010</option>
+                                <option>011</option>
+                                <option>012</option>
+
+                              </select>
+                              <div class="invalid-feedback">
+                               전화번호를 입력해주세요.
+                              </div>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                              <label for="code"></label>
+                              <input type="text" class="form-control" id="code" placeholder="" required style="
+                              margin-top: 8px";>
+                              <div class="invalid-feedback">
+                                전화번호를 입력해주세요.
+                            </div>
+                              </div>
+                            
+                              <div class="col-md-3 mb-3">
+                                <label for="code"></label>
+                                <input type="text" class="form-control" id="code" placeholder="" required style="
+                                margin-top: 8px">
+                                <div class="invalid-feedback">
+                                전화번호를 입력해주세요.
+                                </div>
+
+                            </div>
+                          </div>
+
+                            
+                    <div class="mb-2">
+                        <label for="address">주소</label>
+                        <input type="text" class="form-control" value="" required>
+                        <div class="invalid-feedback">
+                            이름을 입력해주세요.
+                        </div>
+                    </div>
+                    <div class="mb-2">
+                        <label for="address2">상세주소</label>
+                        <input type="text" class="form-control" placeholder="상세주소를 입력해주세요" value="" required>
+                    </div>
+                    <hr class="mb-3">
+                    <div class="sign-up-custom-control custom-checkbox">
+                        <input type="checkbox" class="sign-up-custom-control-input" id="aggrement" required>
+                        <label class="sign-up-custom-control-label" for="aggrement">개인정보 수집 및 이용에 동의합니다.</label>
+                    </div>
+                    <div class="mb-4">
+                        <button id="sign-btn" class="sign-up-custom-btn btn-8" type="submit"><span>가입완료</span></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <script src="js/sign-up.js"></script>
+</body>
+
+</html>

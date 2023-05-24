@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WAGs</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/jquery-3.6.3.min.js"></script>
+  <script src="js/chat-bot.js"></script>
+  <script>
+    $(document).ready(function () {
+      const loader = document.querySelector('.loader--text');
+      const loadingText = document.querySelector('#loading-h1');
+      var i = 0;
+      var num = 0;
+      var loadingProgress = 10;
+      var dot = [".", "..", "..."];
+
+      loading = setInterval(() => {
+        if (loadingProgress < 80) {
+          loadingProgress += Math.floor(Math.random() * 15 + 7);
+          loader.innerText = `-  ${loadingProgress}%  -`
+        } else {
+          loadingProgress = 100;
+          loader.innerText = `-  100%  -`
+          clearInterval(loading);
+        }
+      }, 400);
+
+      makeDot = setInterval(() => {
+        num = num + 1;
+        i = num % 3;
+        // console.log(i);
+        loadingText.innerText = `Loading${dot[i]}`;
+      }, 300)
+
+      stopDot = setTimeout(()=>{
+        clearInterval(makeDot)
+      },6000)
+    });
+  </script>
+
+</head>
+
+<body id="index__body">
+  <header>
+    <div id="nav">
+      <div id="nav__logo">
+        <a href="index.html"><img src="img/main-logo.png" width="360px" height="90px" alt=""></a>
+      </div>
+      <div id="nav__right">
+        <ul class="nav__list">
+          <li>
+            <a href="about-us.html">About Us</a>
+          </li>
+          <li>
+            <a href="products.html">Products</a>
+          </li>
+          <li>
+            <a href="community.html">Community</a>
+          </li>
+          <li>
+            <a href="contact.html">Contact Us</a>
+          </li>
+        </ul>
+        <ul id="nav__icon">
+          <input id="search-input" class="v-hidden" type="text" />
+          <li id="toggle-vibility">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </li>
+          <li id="cart-btn"><i class="fa-solid fa-cart-shopping"></i></li>
+          <li>
+            <a href="login.html"><i class="fa-solid fa-user-tie"></i><span id="greeting">Log-In</span></a>
+          </li>
+        </ul>
+      </div>
+      <div class="nav_padding"></div>
+    </div>
+    <div id="lightoff" class="lightoff-hidden" onclick="lightOn()"></div>
+    <div id="cart">
+      <div id="cart__top">
+        <i class="fa-solid fa-angles-right"></i>
+        <span>Cart</span>
+        <span class="padding">i</span>
+      </div>
+      <div id="cart__container">
+        <span id="cart__empty"></span>
+        <ul id="cart__list"></ul>
+      </div>
+      <div id="cart__bottom">
+        <div id="cart__calculator">
+          <span id="cart__sum1">Total :</span>
+          <span id="cart__sum2">0.00</span>
+        </div>
+        <div id="cart__bottom__btndiv">
+          <a href="cart.html"><button id="cart__viewCart" >View Cart</button></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <main id="index__main">
+
+    <div id="main__first">
+      <video autoplay loop id="video-background" poster="" muted>
+        <source src="img/대문.mp4" type="video/mp4" />
+      </video>
+      <div id="main__first__div">
+        <p id="main__first__p">
+          Power up your Game <br />
+          <span class="big">
+            CYBER KID <br />
+            INFINITE</span>
+          <br />
+          Now Available on PC & Console
+        </p>
+        <a href="products.html"><button class="go-to-products-btn" type="submit">
+            Buy Now
+          </button></a>
+      </div>
+      <div id="main__first__img">
+        <img src="./img/Cyber-copy.webp" alt="" />
+      </div>
+    </div>
+
+    <div id="main-five">
+
+      <!-- 첫번째 이미지 -->
+      <div class="main5">
+          <div class="main5-card">
+            <div class="main5-wrapper">
+              <img src="https://github.com/junyihong/Project01/blob/main/img/five-img-1-1.jpg?raw=true" class="main5-cover-image" />
+                <!-- 전체이미지 -->
+            </div>
+            <img src="https://github.com/junyihong/Project01/blob/main/img/Fauget%20(500%20%C3%97%20200px).png?raw=true" class="main5-title" /> 
+              <!-- 타이틀 제목 -->
+              <img src="https://github.com/junyihong/Project01/blob/main/img/five-img-1.png?raw=true" class="main5-character" />
+              <!-- 튀어나올 부분 -->
+          </div>
+        </div>
+        
+        
+        
+        <!-- 두번째 이미지 -->
+        <div class="main5">
+          <div class="main5-card">
+            <div class="main5-wrapper">
+              <img src="https://github.com/junyihong/Project01/blob/main/img/five-img-2-2.jpg?raw=true" class="main5-cover-image" />
+                <!-- 전체이미지 -->
+            </div>
+            <img src="https://github.com/junyihong/Project01/blob/main/img/Fauget%20(500%20%C3%97%20200px).png?raw=true" class="main5-title" /> 
+            <!-- 타이틀 제목 -->
+        
+            <img src="https://github.com/junyihong/Project01/blob/main/img/five-img-2.png?raw=true" class="main5-character" />
+              <!-- 튀어나올 부분 -->
+        
+          </div>
+        </div>
+        
+        <!-- 세번째 이미지 -->
+        <div class="main5">
+            <div class="main5-card">
+              <div class="main5-wrapper">
+                <img src="https://github.com/junyihong/Project01/blob/main/img/five-img-3-3%20(2).jpg?raw=true" class="main5-cover-image" /> 
+                <!-- 전체이미지 -->
+              </div>
+              <img src="https://github.com/junyihong/Project01/blob/main/img/Fauget%20(500%20%C3%97%20200px).png?raw=true" class="main5-title" /> 
+              <!-- 타이틀 제목 -->
+              <img src="https://github.com/junyihong/Project01/blob/main/img/five-img-3.png?raw=true" class="main5-character"/>
+              <!-- 튀어나올 부분 -->
+            </div>
+          <!-- partial -->
+          </div>
+        </div>
+      
+      
+      
+        <!-- 메인 파트 5 끝 -->
+    <div id="main__second">
+      <div class="main__title__box" id="main2__title">
+        <span class="main__title">BEST SELLERS</span>
+        <a href="products.html"><button class="go-to-products-btn2 " type="submit">
+            View All
+          </button></a>
+      </div>
+      <div id="main__second__contents">
+        <div class="prev">
+          <i class="fa-solid fa-circle-chevron-left"></i>
+        </div>
+        <div id="slide__wrapper">
+          <!-- <form action="" id="cart__form"> -->
+          <ul class="slides">
+            <li>
+              <div class="best-img-box">
+                <img id="best1" src="./img/best1.webp" alt="" />
+              </div>
+              <p>
+                Wave Gen RX <br />
+                <span class="best-price">$579.99</span>
+              </p>
+              <button class="best-btn" onclick="handleCartSubmit('./img/best1.webp', 'Wave Gen RX', '579.99')"
+                id="best-btn1">Add to Cart</button>
+            </li>
+            <li>
+              <div class="best-img-box">
+                <img id="best2" src="./img/best2.webp" alt="" />
+              </div>
+              <p>
+                X-2 Wireless Mouse <br />
+                <span class="best-price">$24.99</span>
+              </p>
+              <button class="best-btn" onclick="handleCartSubmit('./img/best2.webp', 'X-2 Wireless Mouse', '24.99')"
+                id="best-btn2">Add to Cart</button>
+            </li>
+            <li>
+              <div class="best-img-box">
+                <img src="./img/ancient_souls.webp" alt="" />
+              </div>
+              <p>
+                Ancient Souls <br />
+                <span class="best-price">$39.99</span>
+              </p>
+              <button class="best-btn" onclick="handleCartSubmit('./img/ancient_souls.webp', 'Ancient Souls', '39.99')"
+                id="best-btn3">Add to Cart</button>
+            </li>
+            <li>
+              <div class="best-img-box">
+                <img src="./img/Chronosplit.webp" alt="" />
+              </div>
+              <p>
+                Chronosplit
+                <br />
+                <span class="best-price">$39.99</span>
+              </p>
+              <button class="best-btn" onclick="handleCartSubmit('./img/Chronosplit.webp', 'Chronosplit', '39.99')"
+                id="best-btn4">Add to Cart</button>
+            </li>
+            <li>
+              <div class="best-img-box">
+                <img src="./img/Playbox_XZ_Gold_Edition.webp" alt="" />
+              </div>
+              <p>
+                Playbox XZ Gold Edition<br />
+                <span class="best-price">$999.00</span>
+              </p>
+              <button class="best-btn"
+                onclick="handleCartSubmit('./img/Playbox_XZ_Gold_Edition.webp' ,'Playbox XZ Gold Edition', '999.00')"
+                id="best-btn5">Add to Cart</button>
+            </li>
+            <li>
+              <div class="best-img-box">
+                <img src="./img/Raptor.webp" alt="" />
+              </div>
+              <p>
+                Raptor <br />
+                <span class="best-price"><del>$29.99</del>&nbsp; $26.99</span>
+              </p>
+              <button class="best-btn" onclick="handleCartSubmit('./img/Raptor.webp','Raptor', '26.99')"
+                id="best-btn6">Add to Cart</button>
+            </li>
+            <li>
+              <div class="best-img-box">
+                <img src="./img/Echo_Headset.webp" alt="" />
+              </div>
+              <p>
+                Echo_Headset<br />
+                <span class="best-price">$39.99</span>
+              </p>
+              <button class="best-btn" onclick="handleCartSubmit('./img/Echo_Headset.webp', 'Echo_Headset', '39.99')"
+                id="best-btn7">Add to Cart</button>
+            </li>
+            <li>
+              <div class="best-img-box">
+                <img src="./img/Wave.webp" alt="" />
+              </div>
+              <p>
+                Wave<br />
+                <span class="best-price">$29.99</span>
+              </p>
+              <button class="best-btn" onclick="handleCartSubmit('./img/Wave.webp' ,'Wave', '29.99')" id="best-btn8">Add
+                to Cart</button>
+            </li>
+            <li>
+              <div class="best-img-box">
+                <img src="./img/Spartan_Mechanical_Keyboard.webp" alt="" />
+              </div>
+              <p>
+                Spartan Mechanical Keyboard<br />
+                <span class="best-price"><del>$44.99</del>&nbsp; $40.49</span>
+              </p>
+              <button class="best-btn"
+                onclick="handleCartSubmit('./img/Spartan_Mechanical_Keyboard.webp' ,'Spartan Mechanical Keyboard', '40.49')"
+                id="best-btn9">Add to Cart</button>
+            </li>
+            <li>
+              <div class="best-img-box">
+                <img src="./img/Mach_Gaming_Chair.webp" alt="" />
+              </div>
+              <p>
+                Mach Gaming Chair<br />
+                <span class="best-price"><del>$129.99</del>&nbsp; $116.99</span>
+              </p>
+              <button class="best-btn"
+                onclick="handleCartSubmit('./img/Mach_Gaming_Chair.webp', 'Mach Gaming Chair', '116.99')"
+                id="best-btn10">Add to Cart</button>
+            </li>
+          </ul>
+          <!-- </form> -->
+        </div>
+        <div class="next">
+          <i class="fa-solid fa-circle-chevron-right"></i>
+        </div>
+      </div>
+    </div>
+
+    <div id="main__third">
+      <div class="main__title__box">
+        <span class="main__title">SHOP BY CATEGORY</span>
+      </div>
+      <div id="main__third__contents">
+        <div class="main__third__con">
+          <div class="img__con">
+            <img class="main__third__img" src="img/console1.jpg" />
+          </div>
+          <span class="main__third__span">Consoles</span>
+        </div>
+        <div class="main__third__con">
+          <div class="img__con">
+            <img class="main__third__img" src="img/accessories.JPG" />
+          </div>
+          <span class="main__third__span">Accessories</span>
+        </div>
+        <div class="main__third__con">
+          <div class="img__con">
+            <img class="main__third__img" src="img/controlers.jpg" />
+          </div>
+          <span class="main__third__span">Controllers</span>
+        </div>
+      </div>
+    </div>
+
+    <div id="main__fourth">
+      <div id="fourth__box1">
+        <p>
+          THIS WEEK'S DEALS <br />
+          <span class="king-big">10%</span><br />
+          <span class="fourth-big">off all games</span><br />
+          <a href="products.html"><button class="forth-btn" type="submit">Shop Now</button></a>
+        </p>
+      </div>
+      <div id="fourth__box__con">
+        <div id="fourth__box2">
+          <img src="img/kira.webp" width="380px" height="520px" />
+        </div>
+        <div id="fourth__box3">
+          <img src="img/chrono.jpg" width="380px" height="520px" />
+        </div>
+        <div id="fourth__box4">
+          <img src="img/deadatlast.jpg" width="380px" height="520px" />
+        </div>
+      </div>
+    </div>
+
+    <!-- 메인 파트 6번 시작 -->
+
+
+
+    <div id="main-six">
+      <!-- 전체이미지 -->
+
+      <main id=main-six-app>
+
+        <h1 class="main-six-h1">VIP membership card
+          <em>Try it</em> ✨!
+        </h1>
+
+        <aside class="card-front">
+          <label class="number" for="cardNumber">
+            2023 s/s 0003 0015
+          </label>
+          <label class="name" for="cardHolder">
+            kim solbe
+          </label>
+          <label class="expiry" for="expiryMonth">
+            03/27
+          </label>
+          <img class="cardLogo" data-v-5d206127="" data-v-8fcb32d4="" style="opacity: 1;"
+            src="https://simey-credit-card.netlify.app/img/logos/master.svg">
+
+          <!-- 마그네틱 네모 부분 -->
+          <div class="chip">
+            <svg role="img" viewBox="0 0 100 100" aria-label="Chip">
+              <use href="#chip-lines" />
+            </svg>
+          </div>
+          <svg class="contactless" role="img" viewBox="0 0 24 24" aria-label="Contactless">
+            <use href="#contactless">
+          </svg>
+
+        </aside>
+      </main>
+
+      <!-- 마그네틱 세부 디자인 -->
+      <svg id="chip">
+        <g id="chip-lines">
+          <polyline points="0,50 35,50"></polyline>
+          <polyline points="0,20 20,20 35,35"></polyline>
+          <polyline points="50,0 50,35"></polyline>
+          <polyline points="65,35 80,20 100,20"></polyline>
+          <polyline points="100,50 65,50"></polyline>
+          <polyline points="35,35 65,35 65,65 35,65 35,35"></polyline>
+          <polyline points="0,80 20,80 35,65"></polyline>
+          <polyline points="50,100 50,65"></polyline>
+          <polyline points="65,65 80,80 100,80"></polyline>
+        </g>
+      </svg>
+
+      <svg id="contactless">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M9.172 15.172a4 4 0 0 1 5.656 0"></path>
+        <path d="M6.343 12.343a8 8 0 0 1 11.314 0"></path>
+        <path d="M3.515 9.515c4.686 -4.687 12.284 -4.687 17 0"></path>
+      </svg>
+    </div>
+    <!-- 메인 파트 6번 끝 -->
+
+
+
+
+    <!-- 7번째 파트 -->
+    <div class="main-seven">
+      <img class="main-seven-img"
+        src="https://static.wixstatic.com/media/c837a6_120b654bf8214699a68e61aedba60fdd~mv2.png/v1/fill/w_961,h_309,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Games%20stack%20copy.png">
+    </div>
+    <!-- 7번째 파트 -->
+
+  </main>
+
+
+
+
+  <!-- 챗봇 -->
+  <div class="chat">
+    <button class="bot">
+      <i class="fa-solid fa-comment-dots"></i>
+    </button>
+    <div class="text__icon">
+      <div class="chat__top">
+        <img src="img/chat-logo.png" id="chat__top__img">
+        <p id="chat__top__p">
+          <span id="chat__top__name">WAGs</span><br>
+          <span id="chat__top__reply">We’ll reply as soon as we can.</span>
+        </p>
+        <button id="chat__top__btn"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div id="chat__middle">
+        <div id="chat__new">
+          <span>NEW MESSAGE</span>
+        </div>
+        <div class="chat__message">
+          <div class="mk2">
+            Hey there, please leave your details so we can contact you even if
+            you are no longer on the site.
+          </div>
+        </div>
+        <div class="chat__message1">
+          <br />
+          <input class="mk" type="text" placeholder="Name" />
+          <br />
+          <input class="mk" type="email" placeholder="E-mail" />
+          <br />
+          <button class="submit_btn" value="">submit</button>
+        </div>
+      </div>
+      <div class="text__string">
+        <input class="tex" type="text" placeholder="Type your message" />
+        <i class="fa-regular fa-face-smile"></i>
+        <i class="fa-solid fa-paperclip"></i>
+      </div>
+    </div>
+  </div>
+
+  <!-- 스플래시 스크린 -->
+  <div id="splash-screen">
+    <img id="splash-img" src="img/logo-splash.gif" />
+    <div id="splash-load">
+      <div id="splash-load-div">
+        <h1 id="loading-h1">Loading </h1><i class="fa-solid fa-spinner"></i>
+      </div><br>
+      <span class='loader--text'>- 0% -</span>
+    </div>
+  </div>
+  <!-- 푸터 -->
+  <footer>
+    <div id="foot__top">
+      <div class="foot__upperbox">
+        <h1><i class="fa-brands fa-accusoft"></i> WAGs</h1>
+      </div>
+      <div class="foot__upperbox">
+        <ul>
+          <span class="foot__firstline">Products</span>
+          <li>Games</li>
+          <li>Consoles</li>
+          <li>Controllers</li>
+          <li>Accessories</li>
+        </ul>
+      </div>
+      <div class="foot__upperbox">
+        <ul>
+          <span class="foot__firstline">Store</span>
+          <li>
+            500 Terry Francois Street <br />
+            San Francisco, CA94158
+          </li>
+          <li>Mon-Fri: 9am - 9pm</li>
+          <li>info@mysite.com</li>
+          <li>123-456-7890</li>
+        </ul>
+      </div>
+      <div class="foot__upperbox">
+        <span class="foot__firstline">Policy</span>
+        <ul>
+          <li>Terms & Conditions</li>
+          <li>Shipping Policy</li>
+          <li>Privacy Policy</li>
+          <li>Cookie Policy</li>
+          <li>FAQ</li>
+        </ul>
+      </div>
+    </div>  </main>
+    <div class="line">&nbsp;</div>
+    <div id="foot__bottom">
+      <div class="foot__underbox">
+        <span id="pay">Payment Methods</span><br />
+        <img src="img/pay.PNG" />
+      </div>
+      <div class="foot__underbox">
+        <span id="pay">Join the Community</span><br />
+        <img src="img/join.png" />
+      </div>
+    </div>
+  </footer>
+  <script src="js/cart.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/chat-bot.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script src="js/index-greeting.js"></script>
+  <script src="js/main2.js"></script>
+  <script src="js/main4.js"></script>
+  <script src="js/jquery-3.6.3.min.js"></script>
+  <script src="https://kit.fontawesome.com/0f1871673a.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

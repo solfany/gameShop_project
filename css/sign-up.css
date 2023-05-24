@@ -1,0 +1,337 @@
+/* 전체 값 세팅 */
+.sign-up-body {
+    padding: 0px;
+    margin: 0px;
+}
+
+/* 제목 css */
+.sign-up-h2 {
+    margin-top: 0px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    text-shadow: 50px;
+    animation: pulsate 1.51s ease-in-out infinite alternate;
+}
+
+/* 제목 폰트 CSS  */
+@keyframes pulsate {
+    100% {
+        /* Larger blur radius */
+        text-shadow: 0 0 4px #fff, 0 0 11px rgb(0, 0, 0), 0 0 19px #fff, 0 0 40px rgb(0, 174, 255), 0 0 80px rgb(2, 120, 255), 0 0 90px rgb(204, 0, 255), 0 0 100px rgb(183, 0, 255), 0 0 150px #0fa;
+    }
+
+    0% {
+        /* Smaller blur radius */
+        text-shadow: 0 0 2px #fff, 0 0 4px rgb(255, 253, 253), 0 0 6px #fff, 0 0 10px rgb(0, 174, 255), 0 0 45px rgb(0, 174, 255), 0 0 55px rgb(140, 0, 255), 0 0 70px rgb(183, 0, 255), 0 0 80px rgb(0, 174, 255);
+    }
+}
+
+/* 폼 넓이 조정 */
+#joinForm{
+    display: block;
+    border-radius: 15px;
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+    /* margin-top: 60px;
+    margin-bottom: -10px; */
+    padding: 32px;
+    border: 1px solid #7c7c7c;
+    background: #ffffff;
+    /* 로그인 폼 투명도 */
+    opacity: 0.8;
+    box-shadow: 20px 20px 20px rgb(0, 0, 0);
+}
+
+/* 배경 동영상 조정 태그  */
+.sign-up-text {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+#sign-up-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translate(-50%, -50%);
+}
+/* 버튼  */
+.sign-up-custom-btn {
+    width: 100%;
+    height: 5vh;
+    color: #fff;
+    border-radius: 5px;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.7s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    outline: none;
+}
+
+.btn-8 {
+    background-color: #2cd3bd;
+    background-image: linear-gradient(315deg, #0104a8 0%, #9225e6 74%);
+    line-height: 42px;
+    padding: 0;
+    border: none;
+}
+
+.btn-8 span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.btn-8:before,
+.btn-8:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    bottom: 0;
+    background: #8c00f7;
+    transition: all 0.3s ease;
+}
+
+.btn-8:before {
+    height: 0%;
+    width: 2px;
+}
+
+.btn-8:after {
+    width: 0%;
+    height: 2px;
+}
+
+.btn-8:hover:before {
+    height: 100%;
+}
+
+.btn-8:hover:after {
+    width: 100%;
+}
+
+.btn-8:hover {
+    background: transparent;
+}
+
+.btn-8 span:hover {
+    color: #8f00fc;
+}
+
+.btn-8 span:before,
+.btn-8 span:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    background: #029bfa;
+    transition: all 0.3s ease;
+}
+
+.btn-8 span:before {
+    width: 2px;
+    height: 0%;
+}
+
+.btn-8 span:after {
+    height: 2px;
+    width: 0%;
+}
+
+.btn-8 span:hover:before {
+    height: 100%;
+}
+
+.btn-8 span:hover:after {
+    width: 100%;
+}
+.hidden {
+    display: none;
+}
+
+
+/* ---------------------버튼 누르면 나오는 새로운 창-------------------------- */
+#newWindow{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 15px;
+    width: 40%;
+    min-width: 600px;
+    white-space:nowrap;
+    height: 50vh;
+    margin: 0 auto;
+    font-size: 25px;
+    font-weight: 700;
+    padding: 32px;
+    border: 1px solid #7c7c7c;
+    background: #ffffff;
+    /* 로그인 폼 투명도 */
+    box-shadow: 20px 20px 20px rgb(0, 0, 0);
+    /* animation-name: showWindow;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1s; */
+    transition: 0.5s ease-in-out; 
+}
+@keyframes showWindow {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+    
+}
+#newWindow span {
+    display: inline-block;
+    padding-top: 4px;
+    font-weight: 700;
+    font-family: 'Montserrat';
+}
+#newWindow a {
+    width: 80%;
+}
+.newBtn {
+    height: 5vh;
+    color: #fff;
+    border-radius: 5px;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.7s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    outline: none;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+    background-color: #2cd3bd;
+    background-image: linear-gradient(315deg, #0104a8 0%, #9225e6 74%);
+    line-height: 42px;
+    padding: 0;
+    border: none;
+}
+.newBtn span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+.newBtn:hover {
+    background: transparent;
+}
+.newBtn span:hover {
+    color: #8f00fc;
+}
+.newBtn:before,
+.newBtn:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    bottom: 0;
+    background: #8c00f7;
+    transition: all 0.3s ease;
+}
+
+.newBtn:before {
+    height: 0%;
+    width: 2px;
+}
+
+.newBtn:after {
+    width: 0%;
+    height: 2px;
+}
+
+.newBtn:hover:before {
+    height: 100%;
+}
+
+.newBtn:hover:after {
+    width: 100%;
+}
+
+.newBtn:hover {
+    background: transparent;
+}
+
+.newBtn span:hover {
+    color: #8f00fc;
+}
+
+.newBtn span:before,
+.newBtn span:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    background: #029bfa;
+    transition: all 0.3s ease;
+}
+
+.newBtn span:before {
+    width: 2px;
+    height: 0%;
+}
+
+.newBtn span:after {
+    height: 2px;
+    width: 0%;
+}
+
+.newBtn span:hover:before {
+    height: 100%;
+}
+
+.newBtn span:hover:after {
+    width: 100%;
+}
+
+.gender{
+    /*성별칸 위치조정*/
+    display: flex;
+}
+
+.man{
+    /*남자 라디오버튼 위치조정*/
+padding-top: 5px;
+}
+
+.woman{
+    /*여자 라디오버튼 위치조정*/
+    padding-top: 5px;
+    padding-left: 30px;
+}
+
+.sign_up-select{
+    display: block;
+    border-radius: 15px;
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+    /* margin-top: 60px;
+    margin-bottom: -10px; */
+    padding: 32px;
+    border: 1px solid #7c7c7c;
+    background: #ffffff;
+}

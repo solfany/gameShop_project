@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WAGs</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/jquery-3.6.3.min.js"></script>
+  <script src="js/chat-bot.js"></script>
+  <script src="js/FAQs&tabs.js"></script>
+</head>
+
+<body>
+  <header>
+    <div id="nav">
+      <div id="nav__logo">
+        <a href="index.html"><img src="img/main-logo.png" width="360px" height="90px" alt=""></a>
+      </div>
+      <div id="nav__right">
+        <ul class="nav__list">
+          <li>
+            <a href="about-us.html">About Us</a>
+          </li>
+          <li>
+            <a href="products.html">Products</a>
+          </li>
+          <li>
+            <a href="community.html">Community</a>
+          </li>
+          <li>
+            <a href="contact.html">Contact Us</a>
+          </li>
+        </ul>
+        <ul id="nav__icon">
+          <input id="search-input" class="v-hidden" type="text" />
+          <li id="toggle-vibility">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </li>
+          <li id="cart-btn"><i class="fa-solid fa-cart-shopping"></i></li>
+          <li>
+            <a href="login.html"><i class="fa-solid fa-user-tie"></i><span id="greeting">Log-In</span></a>
+          </li>
+        </ul>
+      </div>
+      <div class="nav_padding"></div>
+    </div>
+    <div id="lightoff" class="lightoff-hidden" onclick="lightOn()"></div>
+    <div id="cart">
+      <div id="cart__top">
+        <i class="fa-solid fa-angles-right"></i>
+        <span>Cart</span>
+        <span class="padding">i</span>
+      </div>
+      <div id="cart__container">
+        <span id="cart__empty">Cart is empty</span>
+        <ul id="cart__list"></ul>
+      </div>
+      <div id="cart__bottom">
+        <div id="cart__calculator">
+          <span id="cart__sum1">Total :</span>
+          <span id="cart__sum2">0.00</span>
+        </div>
+        <div id="cart__bottom__btndiv">
+          <a href="cart.html"><button id="cart__viewCart">View Cart</button></a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main id="contact-us__main">
+    <div id="contact__title"><span>NEED A HAND?</span></div>
+    <div id="contact__container">
+      <div id="contact__left">
+        <span id="contact__subtitle">Contact Us</span> <br>
+        <span id="contact__info">
+          Info@mysite.com <br />
+          <br />
+          123-456-7890 <br />
+          <br />
+          500 Terry Francois Street <br />
+          San Francisco, CA 94158 <br />
+          <br />
+        </span>
+        <!-- 구글 지도 iframe -->
+        <div id="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3171.6952922397118!2d127.10626948146842!3d37.34972193085575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b59c702bb5bd5%3A0xf4c1cd6ac6561210!2z6re466aw7Lu07ZOo7YSw7JWE7Lm0642w66-4IOyEseuCqOu2hOuLueygkA!5e0!3m2!1sko!2skr!4v1678064916103!5m2!1sko!2skr"
+            width="550px" height="325px" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+      <div id="contact__right">
+        <form action="" id="contact__form">
+          <div class="contact__form__div">
+            <label for="contact__FN" class="contact__label">First Name *</label>
+            <input type="text" id="contact__FN" class="contact__input" style="border-top-left-radius: 15px"
+              placeholder="이름" required />
+          </div>
+          <div class="contact__form__div">
+            <label for="contact__LN" class="contact__label">Last Name *</label>
+            <input type="text" id="contact__LN" class="contact__input" style="border-top-right-radius: 15px"
+              placeholder="성" required />
+          </div>
+          <div class="contact__form__div">
+            <label for="contact__EM" class="contact__label">E-mail *</label>
+            <input type="email" id="contact__EM" class="contact__input" placeholder="이메일" required />
+          </div>
+          <div class="contact__form__div">
+            <label for="contact__PN" class="contact__label">Phone</label>
+            <input type="text" id="contact__PN" class="contact__input" placeholder="전화번호" />
+          </div>
+
+          <label for="contact__message" class="contact__label">Leave us a Message</label>
+          <div id="contact__submit__div">
+            <textarea id="contact__message" name="" style="resize: none" cols="30" rows="10"></textarea>
+            <button type="submit" id="contact__submit">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div id="contact__bottom">
+      <span id="FAQ__col1">Frequently Asked Question</span> <br>
+      <div class="tab">
+        <button class="FAQ__btn" onclick="openTab(event, 'FAQ__tab1')">GENERAL</button>
+        <button class="FAQ__btn" onclick="openTab(event, 'FAQ__tab2')">SETTING UP FAQs</button>
+        <button class="FAQ__btn" onclick="openTab(event, 'FAQ__tab3')">SHIPMENT</button>
+      </div>
+      <div id="FAQ__col3">
+        <div id="FAQ__tab1" class="FAQ__tabcontent">
+          <div id="qna1">
+            <div class="FAQ__Q" id="q1">▶ What is an FAQ section? </div>
+            <span class="FAQ__A" id="a1">
+              An FAQ section can be used to quickly answer common questions about your business like "Where do you
+              ship
+              to?", "What are your opening hours?", or "How can I book a service?".
+              <ul class="sns-icons">
+                <li><i class="fa-brands fa-square-facebook"></i></li>
+                <li><i class="fa-brands fa-square-twitter"></i></li>
+                <li><i class="fa-brands fa-square-instagram"></i></li>
+                <li><i class="fa-regular fa-clone"></i></li>
+              </ul></span>
+          </div>
+          <div id="qna2">
+            <div class="FAQ__Q" id="q2">▶ What do FAQs matter? </div>
+            <span class="FAQ__A" id="a2">
+              FAQs are a great way to help site visitors find quick answers to common questions about your business and
+              create a better navigation experience.
+              <ul class="sns-icons">
+                <li><i class="fa-brands fa-square-facebook"></i></li>
+                <li><i class="fa-brands fa-square-twitter"></i></li>
+                <li><i class="fa-brands fa-square-instagram"></i></li>
+                <li><i class="fa-regular fa-clone"></i></li>
+              </ul></span>
+          </div>
+          <div id="qna3">
+            <div class="FAQ__Q" id="q3">▶ Where can I add my FAQs?</div>
+            <span class="FAQ__A" id="a3">
+              FAQs can be added to any page on your site or to your Wix mobile app, giving access to members on the go.
+              <ul class="sns-icons">
+                <li><i class="fa-brands fa-square-facebook"></i></li>
+                <li><i class="fa-brands fa-square-twitter"></i></li>
+                <li><i class="fa-brands fa-square-instagram"></i></li>
+                <li><i class="fa-regular fa-clone"></i></li>
+              </ul></span>
+          </div>
+        </div>
+
+        <div id="FAQ__tab2" class="FAQ__tabcontent">
+          <div id="qna4">
+            <div class="FAQ__Q" id="q4">▶ How do I add a new question & answer?
+              </div>
+            <span class="FAQ__A" id="a4">
+              1. Manage FAQs from your site dashboard or in the Editor <br>
+              2. Add a new question & answer <br>
+              3. Assign your FAQ to a category <br>
+              4. Save and publish.<br>
+              <ul class="sns-icons">
+                <li><i class="fa-brands fa-square-facebook"></i></li>
+                <li><i class="fa-brands fa-square-twitter"></i></li>
+                <li><i class="fa-brands fa-square-instagram"></i></li>
+                <li><i class="fa-regular fa-clone"></i></li>
+              </ul>
+            </span>
+          </div>
+          <div id="qna5">
+            <div class="FAQ__Q" id="q5">▶ Can I insert an image, video, or GIF in my FAQ?
+
+              </div>
+            <span class="FAQ__A" id="a5">
+              1. Manage FAQs from your site dashboard or in the Editor <br>
+              2. Create a new FAQ or edit an existing one <br>
+              3. From the answer text box click on the video, image or GIF icon <br>
+              <ul class="sns-icons">
+                <li><i class="fa-brands fa-square-facebook"></i></li>
+                <li><i class="fa-brands fa-square-twitter"></i></li>
+                <li><i class="fa-brands fa-square-instagram"></i></li>
+                <li><i class="fa-regular fa-clone"></i></li>
+              </ul>
+            </span>
+          </div>
+          <div id="qna6">
+            <div class="FAQ__Q" id="q6">▶ How do I edit or remove the 'Frequently Asked Questions' title?</div>
+            <span class="FAQ__A" id="a6">
+              FAQs can be added to any page on your site or to your Wix mobile app, giving access to members on the go.
+              <ul class="sns-icons">
+                <li><i class="fa-brands fa-square-facebook"></i></li>
+                <li><i class="fa-brands fa-square-twitter"></i></li>
+                <li><i class="fa-brands fa-square-instagram"></i></li>
+                <li><i class="fa-regular fa-clone"></i></li>
+              </ul></span>
+          </div>
+        </div>
+        <div id="FAQ__tab3" class="FAQ__tabcontent">
+          <div id="qna7">
+            <div class="FAQ__Q" id="q7">▶ I checked the delivery status, but it says there's no delivery information.</div>
+            <span class="FAQ__A" id="a7">
+              If the tracking number is registered but there is no delivery information: <br>
+              It could be because the product was shipped on the same day as the order <br>
+              <ul class="sns-icons">
+                <li><i class="fa-brands fa-square-facebook"></i></li>
+                <li><i class="fa-brands fa-square-twitter"></i></li>
+                <li><i class="fa-brands fa-square-instagram"></i></li>
+                <li><i class="fa-regular fa-clone"></i></li>
+              </ul>
+            </span>
+          </div>
+          <div id="qna8">
+            <div class="FAQ__Q" id="q8">▶ Is it possible to have bundled delivery for multiple product orders?</div>
+            <span class="FAQ__A" id="a8">
+              If the products are from the same seller, bundled delivery may be possible. <br>
+              However, for certain products such as furniture, bundled delivery may not be possible <br>
+              <ul class="sns-icons">
+                <li><i class="fa-brands fa-square-facebook"></i></li>
+                <li><i class="fa-brands fa-square-twitter"></i></li>
+                <li><i class="fa-brands fa-square-instagram"></i></li>
+                <li><i class="fa-regular fa-clone"></i></li>
+              </ul>
+            </span>
+          </div>
+          <div id="qna9">
+            <div class="FAQ__Q" id="q9">▶ How do I cancel/return my order?</div>
+            <span class="FAQ__A" id="a9">
+              After payment, you can easily and quickly request a cancellation/return through [My Coupang], <br>
+              and the cancellation will be processed after the product is picked up. <br>
+
+              *Note that for high-priced electronic products, the return fee may vary.
+              <ul class="sns-icons">
+                <li><i class="fa-brands fa-square-facebook"></i></li>
+                <li><i class="fa-brands fa-square-twitter"></i></li>
+                <li><i class="fa-brands fa-square-instagram"></i></li>
+                <li><i class="fa-regular fa-clone"></i></li>
+              </ul>
+            </span>
+          </div>
+        </div>
+      </div>
+
+
+  </main>
+  <footer>
+    <div id="foot__top">
+      <div class="foot__upperbox">
+        <h1><i class="fa-brands fa-accusoft"></i> WAGs</h1>
+      </div>
+      <div class="foot__upperbox">
+        <ul>
+          <span class="foot__firstline">Products</span>
+          <li>Games</li>
+          <li>Consoles</li>
+          <li>Controllers</li>
+          <li>Accessories</li>
+        </ul>
+      </div>
+      <div class="foot__upperbox">
+        <ul>
+          <span class="foot__firstline">Store</span>
+          <li>
+            500 Terry Francois Street <br />
+            San Francisco, CA94158
+          </li>
+          <li>Mon-Fri: 9am - 9pm</li>
+          <li>info@mysite.com</li>
+          <li>123-456-7890</li>
+        </ul>
+      </div>
+      <div class="foot__upperbox">
+        <span class="foot__firstline">Policy</span>
+        <ul>
+          <li>Terms & Conditions</li>
+          <li>Shipping Policy</li>
+          <li>Privacy Policy</li>
+          <li>Cookie Policy</li>
+          <li>FAQ</li>
+        </ul>
+      </div>
+    </div>
+    <div class="line">&nbsp;</div>
+    <div id="foot__bottom">
+      <div class="foot__underbox">
+        <span id="pay">Payment Methods</span><br />
+        <img src="img/pay.PNG" />
+      </div>
+      <div class="foot__underbox">
+        <span id="pay">Join the Community</span><br />
+        <img src="img/join.png" />
+      </div>
+    </div>
+  </footer>
+  <div class="chat">
+    <button class="bot">
+      <i class="fa-solid fa-comment-dots"></i>
+    </button>
+    <div class="text__icon">
+      <div class="chat__top">
+        <img src="img/chat-logo.png" id="chat__top__img">
+        <p id="chat__top__p">
+          <span id="chat__top__name">WAGs</span><br>
+          <span id="chat__top__reply">We’ll reply as soon as we can.</span>
+        </p>
+        <button id="chat__top__btn"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div id="chat__middle">
+        <div id="chat__new">
+          <span>NEW MESSAGE</span>
+        </div>
+        <div class="chat__message">
+          <div class="mk2">
+            Hey there, please leave your details so we can contact you even if
+            you are no longer on the site.
+          </div>
+        </div>
+        <div class="chat__message1">
+          <br />
+          <input class="mk" type="text" placeholder="Name" /><br>
+          <br />
+          <input class="mk" type="email" placeholder="E-mail" />
+          <br />
+          <button class="submit_btn" value="">submit</button>
+        </div>
+      </div>
+      <div class="text__string">
+        <input class="tex" type="text" placeholder="Type your message" />
+        <i class="fa-regular fa-face-smile"></i>
+        <i class="fa-solid fa-paperclip"></i>
+      </div>
+    </div>
+  </div>
+  <script src="js/cart.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/index-greeting.js"></script>
+  <script src="js/jquery-3.6.3.min.js"></script>
+  <script src="https://kit.fontawesome.com/0f1871673a.js" crossorigin="anonymous"></script>
+  <script>
+    const initialSetSlide = document.querySelector("#FAQ__tab1");
+    const initialSetTab = document.querySelector(".tab button:first-child");
+    initialSetSlide.classList.add("show");
+    initialSetTab.classList.add("active");
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+/* 폰트 import*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Manrope:wght@300;400&family=Source+Sans+Pro:wght@300;400;700&display=swap");
+/* login font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hahmlet&family=IBM+Plex+Sans+KR&family=Montserrat:wght@700;800&family=Noto+Serif+KR&display=swap");
+/* 브라우저의 default 스타일 값 초기화 */
+@import "reset.css";
+
+/* --------------------------------------- */
+
+/* 공통 Components */
+@import "nav&foot/nav-bar.css";
+@import "nav&foot/footer.css";
+@import "chat-bot.css";
+
+/* index */
+@import "main-page/index.css";
+@import "main-page/part1.css";
+@import "main-page/part2.css";
+@import "main-page/part3.css";
+@import "main-page/part4.css";
+@import "main-page/part5.css";
+@import "main-page/part6.css";
+
+/* 각 페이지 */
+@import "about-us.css";
+@import "products.css";
+@import "products_detail.css";
+@import "contact-us.css";
+@import "login.css";
+@import "sign-up.css";
+@import "chat-bot.css";
+@import "cart_in.css";
+@import "community.css";
+@import "board.css";
+@import "writing.css";
+
+
+
+h1 {
+  font-size: 50px;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+}
+main {
+  margin-top: 120px;
+}
+html{
+  scroll-behavior:smooth;
+}
+/* 변수지정 */
+:root {
+  --point-color: rgb(136, 88, 237);
+  --space: 8px 20px;
+  --sub-color: rgb(50, 50, 50);
+  --font-size: 24px;
+  --font-bold: "Montserrat";
+}

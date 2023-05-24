@@ -1,0 +1,98 @@
+#main-five {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000000;
+}
+.main5 {
+  height: 100vh;
+  width: 100vh;
+  margin-top: 70vh;
+  display: flex;
+  align-items: center;
+}
+.main5-card {
+  width: var(--card-width);
+  height: var(--card-height);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0 36px;
+  perspective: 2500px;
+  margin: 0 50px;
+  --main5-card-height: 300px;
+  --main5-card-width: calc(var(--card-height) / 1.5);
+}
+.main5-cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.main5-wrapper {
+  transition: all 0.5s;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+.main5-card:hover .main5-wrapper {
+  transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+  box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+}
+.main5-wrapper::before,
+.main5-wrapper::after {
+  content: "";
+  opacity: 0;
+  width: 100%;
+  height: 80px;
+  transition: all 0.5s;
+  position: absolute;
+  left: 0;
+}
+.main5-wrapper::before {
+  top: 0;
+  height: 100%;
+  background-image: linear-gradient(to top,
+      transparent 46%,
+      rgba(12, 13, 19, 0.5) 68%,
+      rgba(12, 13, 19) 97%);
+}
+.main5-wrapper::after {
+  bottom: 0;
+  opacity: 1;
+  background-image: linear-gradient(to bottom,
+      transparent 46%,
+      rgba(12, 13, 19, 0.5) 68%,
+      rgba(12, 13, 19) 97%);
+}
+.main5-card:hover .main5-wrapper::before,
+.main5-wrapper::after {
+  opacity: 1;
+}
+.main5-card:hover .main5-wrapper::after {
+  height: 120px;
+}
+.main5-title {
+  width: 100%;
+  transition: transform 0.5s;
+}
+.main5-card:hover .main5-title {
+  transform: translate3d(0%, -50px, 100px);
+}
+.main5-character {
+  width: 500px;
+  height: 700px;
+  opacity: 0;
+  transition: all 0.5s;
+  position: absolute;
+  z-index: -1;
+}
+.main5-card:hover .main5-character {
+  opacity: 1;
+  transform: translate3d(0%, -30%, 100px);
+}

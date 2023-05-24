@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WAGs</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div id="nav">
+        <div id="nav__logo">
+          <a href="index.html"
+            ><img src="img/main-logo.png" width="360px" height="90px" alt=""
+          /></a>
+        </div>
+        <div id="nav__right">
+          <ul class="nav__list">
+            <li>
+              <a href="about-us.html">About Us</a>
+            </li>
+            <li>
+              <a href="products.html">Products</a>
+            </li>
+            <li>
+              <a href="community.html">Community</a>
+            </li>
+            <li>
+              <a href="contact.html">Contact Us</a>
+            </li>
+          </ul>
+          <ul id="nav__icon">
+            <input id="search-input" class="v-hidden" type="text" />
+            <li id="toggle-vibility">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </li>
+            <li id="cart-btn"><i class="fa-solid fa-cart-shopping"></i></li>
+            <li>
+              <a href="login.html"
+                ><i class="fa-solid fa-user-tie"></i
+                ><span id="greeting">Log-In</span></a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="nav_padding"></div>
+      </div>
+      <div id="lightoff" class="lightoff-hidden" onclick="lightOn()"></div>
+      <div id="cart">
+        <div id="cart__top">
+          <i class="fa-solid fa-angles-right"></i>
+          <span>Cart</span>
+          <span class="padding">i</span>
+        </div>
+        <div id="cart__container">
+          <span id="cart__empty"></span>
+          <ul id="cart__list"></ul>
+        </div>
+        <div id="cart__bottom">
+          <div id="cart__calculator">
+            <span id="cart__sum1">Total :</span>
+            <span id="cart__sum2">0.00</span>
+          </div>
+          <div id="cart__bottom__btndiv">
+            <a href="cart.html"
+              ><button id="cart__viewCart">View Cart</button></a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="pd__backgroundblack">
+      <div class="pd__background">
+        <div>
+          <div class="s1">
+            <a href="../Project01\index.html"> Home </a> >
+            <a href="../Project01\products.html"> Product </a>
+            > <span style="color: gray"> Game flow Black </span>
+            <a class="page__move" href="../Project01\products_detail2.html">
+              Next -></a
+            >
+            <span class="page__move">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+            <span class="page__move1" href=""><- Prev</span>
+            <!-- 다음 창부터는 Prev에 span태그 말고 a태그 
+            마지막 물품에는 Next가 span 태그가 됨 -->
+          </div>
+          <br />
+          <br />
+          <div class="pd__img">
+            <img
+              id="img1__pid"
+              src="https://static.wixstatic.com/media/c837a6_235d9b7973a240feabdd9097b36d88b3~mv2.jpg/v1/fill/w_500,h_375,al_c,q_85,usm_0.66_1.00_0.01/c837a6_235d9b7973a240feabdd9097b36d88b3~mv2.webp"
+            /><img
+              id="img2__pid"
+              src="https://static.wixstatic.com/media/84770f_4e8f186c43614c62a8eb326e0bade4d2~mv2.jpg/v1/fill/w_500,h_375,al_c,q_85,usm_0.66_1.00_0.01/84770f_4e8f186c43614c62a8eb326e0bade4d2~mv2.webp"
+              alt=""
+            />
+          </div>
+          <div class="detail__box1">
+            <div class="detail__naming">Game flow Black</div>
+            <br />
+            <div class="detail__price">
+              Price : <del>$999.00</del> → $900.00
+            </div>
+            <br />
+            <br />
+            <div class="quantity">Quantity :</div>
+            <input
+              class="quantity_sub"
+              type="number"
+              min="0"
+              max="50"
+              placeholder="1"
+            />
+            <br />
+            <br />
+            <div class="detail__option__">Option :</div>
+            <div>
+              <select class="poi" name="">
+                <option value="" selected>Add more Option</option>
+                <option value="">add product +</option>
+                <option value="">more parts +</option>
+              </select>
+            </div>
+            <br />
+            <br />
+            <br />
+            <div>
+              <button
+                class="best-btn"
+                onclick="handleCartSubmit('./img/console3.webp', 'Game flow Black', '900.00')"
+                id="best-btn1"
+              >
+                Add to Cart
+              </button>
+            </div>
+
+            <br />
+          </div>
+          <div class="zz">
+            <img
+              id="123"
+              src="https://static.wixstatic.com/media/c837a6_235d9b7973a240feabdd9097b36d88b3~mv2.jpg/v1/fill/w_45,h_45,al_c,q_85,usm_0.66_1.00_0.01/c837a6_235d9b7973a240feabdd9097b36d88b3~mv2.webp"
+            />
+            <img
+              id="456"
+              src="https://static.wixstatic.com/media/84770f_4e8f186c43614c62a8eb326e0bade4d2~mv2.jpg/v1/fill/w_45,h_45,al_c,q_85,usm_0.66_1.00_0.01/84770f_4e8f186c43614c62a8eb326e0bade4d2~mv2.webp"
+            />
+          </div>
+          <div class="detail__big">
+            Product Info
+            <button class="view__btn__first">view more info +</button>
+            <div class="view__down__first">
+              I'm a product description. This is a great place to "sell" your
+              product and grab buyers' attention. Describe your product clearly
+              and concisely. Use unique keywords. Write your own description
+              instead of using manufacturers' copy.
+            </div>
+          </div>
+          <div class="detail__small">
+            Policy Info
+            <div>
+              <button class="view__btn__second">Product Info detail +</button>
+              <br />
+              <div class="view__down__second">
+                I'm a product detail. I'm a great place to add more information
+                about your product such as sizing, material, care and cleaning
+                instructions. This is also a great space to write what makes
+                this product special and how your customers can benefit from
+                this item. Buyers like to know what they’re getting before they
+                purchase, so give them as much information as possible so they
+                can buy with confidence and certainty.
+              </div>
+              <br />
+              <button class="view__btn__second-1">
+                Return and Refund Policy detail +
+              </button>
+              <br />
+              <div class="view__down__second-1">
+                I’m a Return and Refund policy. I’m a great place to let your
+                customers know what to do in case they are dissatisfied with
+                their purchase. Having a straightforward refund or exchange
+                policy is a great way to build trust and reassure your customers
+                that they can buy with confidence.
+              </div>
+              <br />
+              <button class="view__btn__second-2">
+                Shopping Info detail +
+              </button>
+              <div class="view__down__second-2">
+                I'm a shipping policy. I'm a great place to add more information
+                about your shipping methods, packaging and cost. Providing
+                straightforward information about your shipping policy is a
+                great way to build trust and reassure your customers that they
+                can buy from you with confidence.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="chat">
+        <button class="bot">
+          <i class="fa-solid fa-comment-dots"></i>
+        </button>
+        <div class="text__icon__pidAlone">
+          <div class="chat__top">
+            <img src="../Project01\img\chat-logo.png" id="chat__top__img" />
+            <p id="chat__top__p">
+              <span id="chat__top__name">WAGs</span><br />
+              <span id="chat__top__reply">We’ll reply as soon as we can.</span>
+            </p>
+            <button id="chat__top__btn">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          <div id="chat__middle">
+            <div id="chat__new">
+              <span>NEW MESSAGE</span>
+            </div>
+            <div class="chat__message">
+              <div class="mk2">
+                Hey there, please leave your details so we can contact you even
+                if you are no longer on the site.
+              </div>
+            </div>
+            <div class="chat__message1">
+              <br />
+              <input class="mk" type="text" placeholder="Name" />
+              <br />
+              <input class="mk" type="email" placeholder="E-mail" />
+              <br />
+              <button class="submit_btn" value="">submit</button>
+            </div>
+          </div>
+          <div class="text__string">
+            <input class="tex" type="text" placeholder="Type your message" />
+            <i class="fa-regular fa-face-smile"></i>
+            <i class="fa-solid fa-paperclip"></i>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div id="foot__top">
+        <div class="foot__upperbox">
+          <h1><i class="fa-brands fa-accusoft"></i> WAGs</h1>
+        </div>
+        <div class="foot__upperbox">
+          <ul>
+            <span class="foot__firstline">Products</span>
+            <li>Games</li>
+            <li>Consoles</li>
+            <li>Controllers</li>
+            <li>Accessories</li>
+          </ul>
+        </div>
+        <div class="foot__upperbox">
+          <ul>
+            <span class="foot__firstline">Store</span>
+            <li>
+              500 Terry Francois Street <br />
+              San Francisco, CA94158
+            </li>
+            <li>Mon-Fri: 9am - 9pm</li>
+            <li>info@mysite.com</li>
+            <li>123-456-7890</li>
+          </ul>
+        </div>
+        <div class="foot__upperbox">
+          <span class="foot__firstline">Policy</span>
+          <ul>
+            <li>Terms & Conditions</li>
+            <li>Shipping Policy</li>
+            <li>Privacy Policy</li>
+            <li>Cookie Policy</li>
+            <li>FAQ</li>
+          </ul>
+        </div>
+      </div>
+      <div class="line">&nbsp;</div>
+      <div id="foot__bottom">
+        <div class="foot__underbox">
+          <span id="pay">Payment Methods</span><br />
+          <img src="../Project01\img\pay.PNG" />
+        </div>
+        <div class="foot__underbox">
+          <span id="pay">Join the Community</span><br />
+          <img src="../Project01\img\join.PNG" />
+        </div>
+      </div>
+    </footer>
+    <script src="js/nav.js"></script>
+    <script src="js/index-greeting.js"></script>
+    <script src="js/chat-bot.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/products_detail.js"></script>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/0f1871673a.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

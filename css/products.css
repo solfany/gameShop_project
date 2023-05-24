@@ -1,0 +1,584 @@
+/*기본세팅*/
+html {
+  /*스크롤 부드럽게 이동
+    및 배경-검은색, 글자-하얀색*/
+  scroll-behavior: smooth;
+  background-color: black;
+  color: white;
+}
+
+.products_body {
+  /*전체*/
+  font-family: 'Manrope';
+  word-spacing: 5px;
+  font-weight: 700;
+}
+
+.products_img {
+  /*상품 이미지 크기 조정*/
+
+  width: 470px;
+  height: 470px;
+}
+
+.products_button {
+  /*Add to Cart 버튼*/
+  width: 470px;
+  height: 40px;
+  margin-top: 20px;
+  margin-left: 30px;
+  color: white;
+  font-size: 18px;
+  background-color: rgb(136, 88, 237);
+  font-family: 'Montserrat';
+  font-weight: 700;
+  border-radius: 25px;
+  border: 2px solid rgb(136, 88, 237);
+  cursor: pointer;
+}
+
+.products_button:hover {
+  /*Add to Cart에 마우스 포인터를 올렸을 시 행동*/
+  transition: 0.3s linear;
+  background-color: white;
+  color: rgb(136, 88, 237);
+}
+
+/*사이드 세팅*/
+
+.products_main_name {
+  /*Shop 위치 조정*/
+  padding-left: 270px;
+  padding-top: 30px;
+}
+
+.products_sidebar {
+  /*사이드 메뉴 위치 고정*/
+  border: 3px solid white;
+  border-radius: 25px;
+  position: fixed;
+  margin-left: 40px;
+  margin-top: 7%;
+  font-size: 20px;
+  padding: 20px;
+  z-index: 100;
+}
+
+.products_a {
+  /*사이드 바 간에 위치 밎 세부사항 조정*/
+  display: block;
+  text-align: center;
+  padding: 15px 15px;
+  border-radius: 15px;
+}
+
+.products_a:hover {
+  /*사이드 바에 마우스 올릴시 행동*/
+  color: rgb(110, 40, 175);
+  transition: 0.3s ease-in-out;
+  background-color: white;
+}
+
+/*메인 세팅*/
+
+.products_main {
+  /*전체 메인 위치 조정 (사이드 제외하고 전체 이동)*/
+  padding-left: 140px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.products_name {
+  /*소제목 위치 조정*/
+  font-size: 30px;
+  padding-left: 130px;
+  padding-bottom: 20px;
+}
+
+.products_photo {
+  /*리스트 메뉴 가로 정렬 및 세부 위치 조정 소제목과 가격 사이 공간 조정*/
+  display: flex;
+  padding-left: 90px;
+  padding-bottom: 40px;
+}
+
+.products_list {
+  /*상품 각각 사이 공간 간격 및 
+    마우스 올렸을 때 이미지 고정*/
+
+  width: 470px;
+  height: 470px;
+  margin-left: 30px;
+  overflow: hidden;
+}
+
+.products_list img:hover {
+  /*마우스 올렸을 때 확장*/
+  transform: scale(1.15);
+  transition: transform 0.5s;
+}
+
+/*On Sale*/
+
+.products_sale_name_1 {
+  /*세일 상품 이름 위치 조정*/
+  /*상품 가격 위치 조정 우선해야함*/
+  margin: 15px 0px 10px 15px;
+}
+
+.products_sale_1:link,
+:visited {
+  /*세일 상품 가격 및 이름 위치 조정*/
+  /*이거 한 뒤 이름 위치 조정해야함*/
+  margin-left: 185px;
+}
+
+.products_sale_name_2 {
+  /*세일 상품 이름 위치 조정*/
+  /*상품 가격 위치 조정 우선해야함*/
+  margin: 15px 0px 10px -3px;
+}
+
+.products_sale_2:link,
+:visited {
+  /*세일 상품 가격 및 이름 위치 조정*/
+  /*이거 한 뒤 이름 위치 조정해야함*/
+  margin-left: 190px;
+}
+
+.products_sale_name_3 {
+  /*세일 상품 이름 위치 조정*/
+  /*상품 가격 위치 조정 우선해야함*/
+  margin: 15px 0px 10px 40px;
+}
+
+.products_sale_3:link,
+:visited {
+  /*세일 상품 가격 및 이름 위치 조정*/
+  /*이거 한 뒤 이름 위치 조정해야함*/
+  margin-left: 195px;
+}
+
+.products_sale_name_4 {
+  /*세일 상품 이름 위치 조정*/
+  /*상품 가격 위치 조정 우선해야함*/
+  margin: 15px 0px 10px -30px;
+}
+
+.products_sale_4:link,
+:visited {
+  /*세일 상품 가격 및 이름 위치 조정*/
+  /*이거 한 뒤 이름 위치 조정해야함*/
+  margin-left: 195px;
+}
+
+.products_sale_name_5 {
+  /*세일 상품 이름 위치 조정*/
+  /*상품 가격 위치 조정 우선해야함*/
+  margin: 15px 0px 10px 35px;
+}
+
+.products_sale_5:link,
+:visited {
+  /*세일 상품 가격 및 이름 위치 조정*/
+  /*이거 한 뒤 이름 위치 조정해야함*/
+  margin-left: 185px;
+}
+
+.products_sale_name_6 {
+  /*세일 상품 이름 위치 조정*/
+  /*상품 가격 위치 조정 우선해야함*/
+  margin: 15px 0px 10px 15px;
+}
+
+.products_sale_6:link,
+:visited {
+  /*세일 상품 가격 및 이름 위치 조정*/
+  /*이거 한 뒤 이름 위치 조정해야함*/
+  margin-left: 195px;
+}
+
+.products_sale_name_7 {
+  /*세일 상품 이름 위치 조정*/
+  /*상품 가격 위치 조정 우선해야함*/
+  margin: 15px 0px 10px 20px;
+}
+
+.products_sale_7:link,
+:visited {
+  /*세일 상품 가격 및 이름 위치 조정*/
+  /*이거 한 뒤 이름 위치 조정해야함*/
+  margin-left: 195px;
+}
+
+.products_sale_name_8 {
+  /*세일 상품 이름 위치 조정*/
+  /*상품 가격 위치 조정 우선해야함*/
+  margin: 15px 0px 10px -35px;
+}
+
+.products_sale_8:link,
+:visited {
+  /*세일 상품 가격 및 이름 위치 조정*/
+  /*이거 한 뒤 이름 위치 조정해야함*/
+  margin-left: 195px;
+}
+
+.products_sale_name_9 {
+  /*세일 상품 이름 위치 조정*/
+  /*상품 가격 위치 조정 우선해야함*/
+  margin: 15px 0px 10px 45px;
+}
+
+.products_sale_9:link,
+:visited {
+  /*세일 상품 가격 및 이름 위치 조정*/
+  /*이거 한 뒤 이름 위치 조정해야함*/
+  margin-left: 190px;
+}
+
+/*Games*/
+
+.products_games_name_1 {
+  /*게임 상품 이름 위치 조정*/
+  /*상품 가격 위치 조정 우선해야함*/
+  margin: 15px 0px 10px -15px;
+}
+
+.products_games_1:link,
+:visited {
+  /*게임 상품 가격 및 이름 위치 조정*/
+  /*이거 한 뒤 이름 위치 조정해야함*/
+  margin-left: 230px;
+}
+
+.products_games_name_2 {
+  /*게임 상품 이름 위치 조정*/
+  /*상품 가격 위치 조정 우선해야함*/
+  margin: 15px 0px 10px -20px;
+}
+
+.products_games_2:link,
+:visited {
+  /*게임 상품 가격 및 이름 위치 조정*/
+  /*이거 한 뒤 이름 위치 조정해야함*/
+  margin-left: 225px;
+}
+
+.products_games_name_3 {
+  /*게임 상품 이름 위치 조정*/
+  /*상품 가격 위치 조정 우선해야함*/
+  margin: 15px 0px 10px 10px;
+}
+
+.products_games_3:link,
+:visited {
+  /*게임 상품 가격 및 이름 위치 조정*/
+  /*이거 한 뒤 이름 위치 조정해야함*/
+  margin-left: 195px;
+}
+
+.products_games_name_4 {
+  /*게임 상품 이름 위치 조정*/
+  /*상품 가격 위치 조정 우선해야함*/
+  margin: 15px 0px 10px -35px;
+}
+
+.products_games_4:link,
+:visited {
+  /*게임 상품 가격 및 이름 위치 조정*/
+  /*이거 한 뒤 이름 위치 조정해야함*/
+  margin-left: 195px;
+}
+
+.products_games_name_5 {
+  /*게임 상품 이름 위치 조정*/
+  /*상품 가격 위치 조정 우선해야함*/
+  margin: 15px 0px 10px -23px;
+}
+
+.products_games_5:link,
+:visited {
+  /*게임 상품 가격 및 이름 위치 조정*/
+  /*이거 한 뒤 이름 위치 조정해야함*/
+  margin-left: 230px;
+}
+
+.products_games_name_6 {
+  /*게임 상품 이름 위치 조정*/
+  /*상품 가격 위치 조정 우선해야함*/
+  margin: 15px 0px 10px -40px;
+}
+
+.products_games_6:link,
+:visited {
+  /*게임 상품 가격 및 이름 위치 조정*/
+  /*이거 한 뒤 이름 위치 조정해야함*/
+  margin-left: 230px;
+}
+
+/*Consoles*/
+
+.products_consoles_name_1 {
+  /*콘솔 상품 이름 위치 조정*/
+  /*상품 가격 위치 조정 우선해야함*/
+  margin: 15px 0px 10px -45px;
+}
+
+.products_consoles_1:link,
+:visited {
+  /*콘솔 상품 가격 및 이름 위치 조정*/
+  /*이거 한 뒤 이름 위치 조정해야함*/
+  margin-left: 220px;
+}
+
+.products_consoles_name_2 {
+  /*콘솔 상품 이름 위치 조정*/
+  /*상품 가격 위치 조정 우선해야함*/
+  margin: 15px 0px 10px -15px;
+}
+
+.products_consoles_2:link,
+:visited {
+  /*콘솔 상품 가격 및 이름 위치 조정*/
+  /*이거 한 뒤 이름 위치 조정해야함*/
+  margin-left: 230px;
+}
+
+.products_consoles_name_3 {
+  /*콘솔 상품 이름 위치 조정*/
+  /*상품 가격 위치 조정 우선해야함*/
+  margin: 15px 0px 10px 10px;
+}
+
+.products_consoles_3:link,
+:visited {
+  /*콘솔 상품 가격 및 이름 위치 조정*/
+  /*이거 한 뒤 이름 위치 조정해야함*/
+  margin-left: 185px;
+}
+
+.products_consoles_name_4 {
+  /*콘솔 상품 이름 위치 조정*/
+  /*상품 가격 위치 조정 우선해야함*/
+  margin: 15px 0px 10px 40px;
+}
+
+.products_consoles_4:link,
+:visited {
+  /*콘솔 상품 가격 및 이름 위치 조정*/
+  /*이거 한 뒤 이름 위치 조정해야함*/
+  margin-left: 185px;
+}
+
+.products_consoles_name_5 {
+  /*콘솔 상품 이름 위치 조정*/
+  /*상품 가격 위치 조정 우선해야함*/
+  margin: 15px 0px 10px -10px;
+}
+
+.products_consoles_5:link,
+:visited {
+  /*콘솔 상품 가격 및 이름 위치 조정*/
+  /*이거 한 뒤 이름 위치 조정해야함*/
+  margin-left: 225px;
+}
+
+.products_consoles_name_6 {
+  /*콘솔 상품 이름 위치 조정*/
+  /*상품 가격 위치 조정 우선해야함*/
+  margin: 15px 0px 10px -17px;
+}
+
+.products_consoles_6:link,
+:visited {
+  /*콘솔 상품 가격 및 이름 위치 조정*/
+  /*이거 한 뒤 이름 위치 조정해야함*/
+  margin-left: 225px;
+}
+
+/*Controllers*/
+
+.products_controllers_name_1 {
+  /*콘솔 상품 이름 위치 조정*/
+  /*상품 가격 위치 조정 우선해야함*/
+  margin: 15px 0px 10px 5px;
+}
+
+.products_controllers_1:link,
+:visited {
+  /*컨트롤러 상품 가격 및 이름 위치 조정*/
+  /*이거 한 뒤 이름 위치 조정해야함*/
+  margin-left: 230px;
+}
+
+.products_controllers_name_2 {
+  /*콘솔 상품 이름 위치 조정*/
+  /*상품 가격 위치 조정 우선해야함*/
+  margin: 15px 0px 10px 10px;
+}
+
+.products_controllers_2:link,
+:visited {
+  /*컨트롤러 상품 가격 및 이름 위치 조정*/
+  /*이거 한 뒤 이름 위치 조정해야함*/
+  margin-left: 230px;
+}
+
+.products_controllers_name_3 {
+  /*콘솔 상품 이름 위치 조정*/
+  /*상품 가격 위치 조정 우선해야함*/
+  margin: 15px 0px 10px -5px;
+}
+
+.products_controllers_3:link,
+:visited {
+  /*컨트롤러 상품 가격 및 이름 위치 조정*/
+  /*이거 한 뒤 이름 위치 조정해야함*/
+  margin-left: 230px;
+}
+
+.products_controllers_name_4 {
+  /*콘솔 상품 이름 위치 조정*/
+  /*상품 가격 위치 조정 우선해야함*/
+  margin: 15px 0px 10px -5px;
+}
+
+.products_controllers_4:link,
+:visited {
+  /*컨트롤러 상품 가격 및 이름 위치 조정*/
+  /*이거 한 뒤 이름 위치 조정해야함*/
+  margin-left: 235px;
+}
+
+.products_controllers_name_5 {
+  /*콘솔 상품 이름 위치 조정*/
+  /*상품 가격 위치 조정 우선해야함*/
+  margin: 15px 0px 10px 45px;
+}
+
+.products_controllers_5:link,
+:visited {
+  /*컨트롤러 상품 가격 및 이름 위치 조정*/
+  /*이거 한 뒤 이름 위치 조정해야함*/
+  margin-left: 195px;
+}
+
+.products_controllers_name_6 {
+  /*콘솔 상품 이름 위치 조정*/
+  /*상품 가격 위치 조정 우선해야함*/
+  margin: 15px 0px 10px 40px;
+}
+
+.products_controllers_6:link,
+:visited {
+  /*컨트롤러 상품 가격 및 이름 위치 조정*/
+  /*이거 한 뒤 이름 위치 조정해야함*/
+  margin-left: 195px;
+}
+
+/*Accessories*/
+
+.products_accessories_name_1 {
+  /*악세사리 상품 이름 위치 조정*/
+  /*상품 가격 위치 조정 우선해야함*/
+  margin: 15px 0px 10px -25px;
+}
+
+.products_accessories_1:link,
+:visited {
+  /*악세사리 항목 가격*/
+  /*이거 한 뒤 이름 위치 조정해야함*/
+  margin-left: 230px;
+}
+
+.products_accessories_name_2 {
+  /*악세사리 상품 이름 위치 조정*/
+  /*상품 가격 위치 조정 우선해야함*/
+  margin: 15px 0px 10px 20px;
+}
+
+.products_accessories_2:link,
+:visited {
+  /*악세사리 항목 가격*/
+  /*이거 한 뒤 이름 위치 조정해야함*/
+  margin-left: 195px;
+}
+
+.products_accessories_name_3 {
+  /*악세사리 상품 이름 위치 조정*/
+  /*상품 가격 위치 조정 우선해야함*/
+  margin: 15px 0px 10px -47px;
+}
+
+.products_accessories_3:link,
+:visited {
+  /*악세사리 항목 가격*/
+  /*이거 한 뒤 이름 위치 조정해야함*/
+  margin-left: 225px;
+}
+
+.products_accessories_name_4 {
+  /*악세사리 상품 이름 위치 조정*/
+  /*상품 가격 위치 조정 우선해야함*/
+  margin: 15px 0px 10px -2px;
+}
+
+.products_accessories_4:link,
+:visited {
+  /*악세사리 항목 가격*/
+  /*이거 한 뒤 이름 위치 조정해야함*/
+  margin-left: 190px;
+}
+
+.products_accessories_name_5 {
+  /*악세사리 상품 이름 위치 조정*/
+  /*상품 가격 위치 조정 우선해야함*/
+  margin: 15px 0px 10px -50px;
+}
+
+.products_accessories_5:link,
+:visited {
+  /*악세사리 항목 가격*/
+  /*이거 한 뒤 이름 위치 조정해야함*/
+  margin-left: 235px;
+}
+
+.products_accessories_name_6 {
+  /*악세사리 상품 이름 위치 조정*/
+  /*상품 가격 위치 조정 우선해야함*/
+  margin: 15px 0px 10px -50px;
+}
+
+.products_accessories_6:link,
+:visited {
+  /*악세사리 항목 가격*/
+  /*이거 한 뒤 이름 위치 조정해야함*/
+  margin-left: 230px;
+}
+
+.products_accessories_name_7 {
+  /*악세사리 상품 이름 위치 조정*/
+  /*상품 가격 위치 조정 우선해야함*/
+  margin: 15px 0px 10px -35px;
+}
+
+.products_accessories_7:link,
+:visited {
+  /*악세사리 항목 가격*/
+  /*이거 한 뒤 이름 위치 조정해야함*/
+  margin-left: 195px;
+}
+
+.products_accessories_name_8 {
+  /*악세사리 상품 이름 위치 조정*/
+  /*상품 가격 위치 조정 우선해야함*/
+  margin: 15px 0px 10px -65px;
+}
+
+.products_accessories_8:link,
+:visited {
+  /*악세사리 항목 가격*/
+  /*이거 한 뒤 이름 위치 조정해야함*/
+  margin-left: 230px;
+}

@@ -1,0 +1,75 @@
+/* 전체 CSS */
+.table-main {
+    height: 1000px;
+    background: black;
+    color: white;
+}
+/* left 메뉴바 */
+.commu_menu {
+    position: fixed;
+    margin-left: 40px;
+    margin-top: 5%;
+    font-size: 20px;
+    padding: 20px;
+    border: 3px solid white;
+    border-radius: 25px;
+    z-index: 100;
+}
+.commu_bar {
+    display: block;
+    text-align: center;
+    padding: 15px 15px;
+    border-radius: 15px;
+    margin-top: 5px;
+}
+.commu_bar:hover {
+    cursor: pointer;
+    color: rgb(136,88,237);
+    background-color: white;
+    transition: 0.3s ease-in-out;
+}
+/* left 메뉴바 끝 */
+
+/* 중앙 전체글 게시판 시작 */
+.commu_board {
+    width: 80%;
+    height: 400px;
+    margin-left: 15%;
+    /* 왼쪽 menu bar에서 떨어지게 하기위해 마진 왼쪽으로 줌 */
+    padding-top: 5%;
+    /* 상단 nav에서 떨어지게 하기위해 패딩 탑으로 줌 */
+    font-size: 25px;
+}
+.commu_boardbox {
+    display: flex;
+    border-bottom: 2px solid rgb(157, 92, 218);
+    /* border를 bottom만 넣어서 게임1부분 실선 작업 */
+}
+.commu_board_text {
+    display: flex;
+    color: white;
+    padding-bottom: 10px;
+}
+.commu_board_alltext > ul > li {
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #eee;
+    /* border를 bottom만 넣어서 list 실선 작업 */
+    color: white;
+    font-size: 20px;
+}
+.commu_board_alltext > ul > li:hover {
+    background: #eee;
+    cursor:pointer;
+}
+.commu_btn {
+    border-style: none;
+    color: white;
+    background: black;
+    font-size: 15px;
+    margin-left: 88%;
+}
+.commu_btn:hover {
+    cursor: pointer;
+    color: rgb(136,88,237);
+}

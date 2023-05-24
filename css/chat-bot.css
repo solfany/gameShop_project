@@ -1,0 +1,189 @@
+.chat {
+  z-index: 999;
+}
+.bot {
+  color: white;
+  font-size: 30px;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  background-color: rgb(136, 88, 237);
+  border-radius: 33px;
+  width: 66px;
+  height: 66px;
+  cursor: pointer;
+  border: none;
+}
+.text__icon {
+  right: 20px;
+  bottom: 20px;
+  width: 340px;
+  height: 590px;
+  background-color: rgb(18, 17, 18);
+  position: fixed;
+  border: 2px solid white;
+  border-radius: 30px;
+  color: white;
+  overflow: hidden;
+}
+.text__icon__pidAlone {
+  right: 15px;
+  bottom: 15px;
+  width: 340px;
+  height: 590px;
+  background-color: rgb(18, 17, 18);
+  position: fixed;
+  border: 2px solid white;
+  border-radius: 25px;
+  color: white;
+  overflow: hidden;
+}
+.chat__top {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 326px;
+  height: 70px;
+  padding: 5px 10px;
+  padding-left: 0;
+  background-color: black;
+  border-radius: 5px 5px 0px 0px;
+}
+#chat__top__img {
+  width: 70px;
+  height: 70px;
+  padding-left: 10px;
+}
+
+#chat__top__p {
+  width: 230px;
+  margin: 0;
+  padding: 0 10px;
+  line-height: 180%;
+}
+#chat__top__name {
+  font-size: 20px;
+  font-family: "Montserrat";
+}
+#chat__top__reply {
+  font-size: 14px;
+  white-space: nowrap;
+  word-spacing: 2px;
+}
+#chat__top__btn {
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+  width: 25px;
+  background-color: transparent;
+  border: none;
+}
+#chat__new {
+  position: relative;
+  top: 10px;
+  text-align: center;
+  background-color: rgba(97, 93, 93, 0.7);
+  padding: 4px 0 6px;
+}
+#chat__new span {
+  color: black;
+  display: inline-block;
+  font-size: 12px;
+  /* border: 1px solid white; */
+  padding: 3px 15px;
+  background-color: rgb(182, 178, 178);
+  border-radius: 15px;
+}
+#chat__middle {
+  display: flex;
+  height: 460px;
+  flex-direction: column;
+}
+.chat__message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 50px 0 20px 20px;
+  padding: 0 10px;
+  width: 225px;
+  height: 120px;
+  border: 1px solid rgb(207, 207, 207);
+  background-color: rgb(77, 77, 77);
+  border-radius: 3px 18px 18px 3px;
+  font-size: 14px;
+  line-height: 170%;
+}
+
+.chat__message1 {
+  margin: 0 0 20px 20px;
+  width: 225px;
+  height: 190px;
+  padding: 0 10px;
+  background-color: rgb(77, 77, 77);
+  border: 1px solid rgb(207, 207, 207);
+  border-radius: 3px 18px 18px 3px;
+  font-size: 15px;
+}
+.mk {
+  border: none;
+  background-color: transparent;
+  width: 180px;
+  height: 30px;
+  color: white;
+  border-bottom: 2px solid gray;
+  padding-left: 15px;
+  margin-left: 15px;
+}
+.mk::placeholder {
+  color: white;
+}
+.mk:focus {
+  border-bottom: 2px solid white;
+}
+.submit_btn {
+  background-color: rgb(221, 220, 220);
+  color: black;
+  width: 180px;
+  height: 40px;
+  text-align: center;
+  margin: 20px 20px 20px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
+  font-weight: 700;
+  transition: 0.5s ease-in-out;
+}
+.submit_btn:hover {
+  color: white;
+  font-weight: 700;
+  background-color: rgb(136, 88, 237);
+  border: 2px solid white;
+}
+.text__string {
+  width: 340px;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  border: none;
+  background-color: white;
+}
+.tex {
+  position: relative;
+  left: 20px;
+  padding-left: 15px;
+  padding-bottom: 5px;
+  border: none;
+  width: 240px;
+  font-size: 14px;
+  font-family: "Montserrat";
+}
+.text__string i {
+  position: relative;
+  color: gray;
+  left: 20px;
+  margin-right: 10px;
+}
+input:focus {
+  outline: none;
+}

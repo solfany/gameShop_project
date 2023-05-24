@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="chat.bot.css" />
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+  </head>
+
+  <!-- DONT TOUCH  CHAT BOT -->
+
+  <body>
+    <div class="chat">
+      <button class="bot">
+        <i class="fa-solid fa-comment-dots"></i>
+      </button>
+      <div class="text__icon">
+        <div class="chat__top">
+          <img src="" id="chat__top__img" />
+          <p id="chat__top__p">
+            <span id="chat__top__name">WAGs</span><br />
+            <span id="chat__top__reply">We’ll reply as soon as we can.</span>
+          </p>
+          <button id="chat__top__btn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div id="chat__middle">
+          <div id="chat__new">
+            <span>NEW MESSAGE</span>
+          </div>
+          <div class="chat__message">
+            <div class="mk2">
+              Hey there, please leave your details so we can contact you even if
+              you are no longer on the site.
+            </div>
+          </div>
+          <div class="chat__message1">
+            <br />
+            <input class="mk" type="text" placeholder="Name" />
+            <br />
+            <input class="mk" type="email" placeholder="E-mail" />
+            <br />
+            <button class="submit_btn" value="">submit</button>
+          </div>
+        </div>
+        <div class="text__string">
+          <input class="tex" type="text" placeholder="Type your message" />
+          <i class="fa-regular fa-face-smile"></i>
+          <i class="fa-solid fa-paperclip"></i>
+        </div>
+      </div>
+    </div>
+    <script src="js/chat-bot.js"></script>
+    <script
+      src="https://kit.fontawesome.com/0f1871673a.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

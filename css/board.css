@@ -1,0 +1,143 @@
+.Board {
+    background: black;
+    height: 1000px;
+    color: white;
+    /* margin-top: 200px; */
+}
+.commu_menu {
+    position: fixed;
+    margin-left: 40px;
+    margin-top: 5%;
+    font-size: 20px;
+    padding: 20px;
+    border: 3px solid white;
+    border-radius: 25px;
+    z-index: 100;
+    
+}
+.commu_bar {
+    display: block;
+    text-align: center;
+    padding: 15px 15px;
+    border-radius: 15px;
+    margin-top: 5px;
+}
+.commu_bar:hover {
+    cursor: pointer;
+    color: rgb(136,88,237);
+    background-color: white;
+    transition: 0.3s ease-in-out;
+
+}
+.Board_main {
+    margin-left: 150px;
+}
+.Board_title {
+    font-size: 30px;
+    font-weight: bold;
+    padding-left: 200px;
+    padding-top: 50px;
+    color: white;
+}
+.Board_sub {
+    padding-bottom: 30px;
+    margin-left: 74.5%;
+}
+.Search_text {
+    width: 200px;
+    height:24px;
+}
+.Search_btn {
+    border-style: none;
+    width: 50px;
+    height: 30px;
+    font-size: 15px;
+    background: black;
+    color: white;
+}
+.Search_btn:hover {
+    cursor: pointer;
+    background: rgb(136,88,237);
+    color: white;
+}
+ul,li {
+    list-style: none;
+}
+.Board_table {
+    align-items: center;
+    width: 80%;
+    margin:auto;
+    border-collapse:collapse;
+    /* 
+    border-collapse : 표 테두리와 셀 테두리 합치는 설정
+    collapse : 테두리를 하나로 합치는것
+    separate : 테두리 따로 설정(기본값)
+     */
+}
+.Board_table th {
+    padding: 30px 20px;
+    background: linear-gradient( rgb(37, 13, 59),rgb(61, 45, 84));
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    border-top: 2px solid #333;
+    border-bottom: 2px solid #ddd;
+}
+.Board_table tr {
+    height: 80px;
+    padding: 30px 20px;
+    color: #666;
+    font-size: 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    background: #eee;
+}
+.Board_table td {
+    padding: 25px 15px;
+    text-align: center;
+}
+.Board_table tr:hover {
+    background: rgb(136,88,237);
+    cursor: pointer;
+}
+
+.pagenum {
+    padding-left: 20%;
+    width: 50%;
+}
+.pagenum > ul {
+    display: flex;
+    justify-content: center;
+}
+.pagenum > ul > li {
+    padding: 5px;
+    /* border: 2px solid; */
+    font-size: 15px;
+    margin-left: 20px;
+    background: black;
+    color:#eee;
+    
+}
+.pagenum > ul > li:hover {
+    cursor: pointer;
+    background: rgb(136,88,237);
+    color:#fff;
+}
+.writing {
+    text-align: right;
+    padding-right: 170px;
+    padding-top: 20px;
+}
+.writing_btn {
+    width: 50px;
+    height: 30px;
+    background: black;
+    color: white;
+    font-size: 15px;
+}
+.writing_btn:hover {
+    border-style: none;
+    cursor: pointer;
+    background: rgb(136,88,237);
+    color: white;
+}

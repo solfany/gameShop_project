@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/login.css">
+  <title>로그인</title>
+
+  <!-- 부트스트랩 -->
+  <link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' rel='stylesheet'>
+  <link href='https://use.fontawesome.com/releases/v5.7.2/css/all.css' rel='stylesheet'>
+</head>
+
+<body>
+
+  <body class="login_body">
+    <video id="loing-video" muted autoplay loop>
+      <source
+        src="https://www.desktophut.com/files/1654788099-1654788099-pc-futuristic-game-room-1-live-wallpaper-free.mp4"
+        type="video/mp4">
+    </video>
+    <div class="login_box">
+      <div>
+        <!-- <body oncontextmenu='return false' class='snippet-body'> -->
+        <h2 class="login-h2">로그인</h2>
+        <div class="container" id="login-container">
+          <div class="panel-heading">
+          </div>
+
+          <div class="login_form">
+            <form action="index.html" class="form-group py-1 pb-2">
+              <div class="login-input-field">
+                <span class="far fa-user px-2"></span>
+                <input id="login-input-id" class="login-input-text_pw" type="text" placeholder="아이디를 입력하세요" required>
+              </div>
+              <div class="login-input-field">
+                <span class="fa fa-lock px-2"></span>
+                <input class="login-input-text_pw" type="password" placeholder="비밀번호를 입력하세요" required>
+                <button class="btn bg-white text-muted">
+              </div>
+              <div class="form-inline" id="login-form-inline"> <input type="checkbox" name="remember" id="remember">
+                <label for="remember" class="text-muted">다음에도 기억하기</label> <a id="login-forgot"
+                  class="font-weight-bold"></a> </div>
+              <br>
+              <div class="frame">
+                <button class="login-custom-btn btn-8" type="submit"><span>Login</span></button>
+              </div>
+              <div class="text-center pt-4 text-muted">아직 회원이 아니신가요? <a href="sign-up.html">회원가입</a>
+            </form>
+          </div>
+          <!--하단 로고 링크-->
+          <!-- https://www.freepnglogos.com/ -->
+          <div class="login-bordert" style="margin: 2vh;">
+          </div>
+          <div class="mt-4">
+            <a class="login_social_icon" href="https://wwww.facebook.com">
+              <img class="login-img"
+                src="https://github.com/junyihong/Project01/blob/main/img/login_icons/login_facebook.png?raw=true"
+                alt="facebook">
+            </a>
+            <a class="login_social_icon" href="https://www.google.com">
+              <img class="login-img"
+                src="https://github.com/junyihong/Project01/blob/main/img/login_icons/login_google.png?raw=true"
+                alt="google">
+            </a>
+            <a class="login_social_icon" href="https://www.instagram.com/">
+              <img class="login-img"
+                src="https://github.com/junyihong/Project01/blob/main/img/login_icons/login_Instagram.png?raw=true"
+                alt="instagram">
+            </a>
+            <a class="login_social_icon"
+              href="https://accounts.kakao.com/login/?continue=https%3A%2F%2Fsharer.kakao.com%2Fpicker%2Flink%3Fapp_key%3D4e0f02e43248fed6c5850431ea527a61%26short_key%3D7aa5d1df-50d6-418c-ae24-997cd5da00ff#login">
+              <img class="login-img"
+                src="https://github.com/junyihong/Project01/blob/main/img/login_icons/login_kakao.png?raw=true"
+                alt="kakao">
+          </div>
+        </div>
+        <script src="js/login-greeting.js"></script>
+  </body>
+
+</html>

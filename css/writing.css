@@ -1,0 +1,100 @@
+.write_main {
+    height: 1500px;
+    background: black;
+}
+.write_top {
+    width: 860px;
+    padding-top:50px;
+    margin-left: 500px;
+    font-size: 25px;
+    color: white;
+    border-bottom: 1px solid #eee;
+}
+.write_title {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    font-size: 20px;
+    color: #eee;
+}
+.write_title_text {
+    width: 800px;
+    height: 30px;
+    margin-left: 20px;
+    border: 2px solid rgb(136,88,237);
+}
+/* .write_text_text {
+    width: 800px;
+    height: 500px;
+    margin-left: 20px;
+    border: 2px solid rgb(136,88,237);
+} */
+
+/* .write_btn {
+    display: flex;
+    justify-content: center;
+    margin:auto;
+    padding-top: 50px;
+}
+.text_btn_b {
+    font-weight: bold;
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+}
+.text_btn_i {
+    font-style: italic;
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+}
+.text_btn_u {
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+    
+} */
+.write_text {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    color: #eee;
+    padding-top: 50px;
+}
+.write_middle {
+    margin-left: 20px;
+    border: 2px solid rgb(136,88,237);
+}
+.file_drop {
+    width: 800px;
+    height: 40px;
+    margin-left: 550px;
+    margin-top: 30px;
+    background-color: white;
+    border: 2px solid rgb(136,88,237);
+    border-radius: 4px;
+    color: black;
+    cursor: pointer;
+}
+.file_dropbtn {
+    padding-top: 8px;
+    padding-left: 5px;
+}
+.write_bottom_btn {
+    margin-left: 650px;
+    width: 800px;
+    height: 100px;
+}
+.write_bottom_btnsub {
+    display: inline;
+    margin-top: 80px;
+    margin-left: 80px;
+    width: 200px;
+    height: 50px;
+    background-color: rgb(136,88,237);
+    color: white; 
+}
+.write_bottom_btnsub:hover {
+    background-color: white;
+    color: rgb(136,88,237);
+}

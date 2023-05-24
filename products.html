@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>WAGs</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/chat-bot.js"></script>
+
+</head>
+
+<body class="products_body">
+    <!-- 헤더  -->
+    <header>
+        <div id="nav">
+            <div id="nav__logo">
+                <a href="index.html"><img src="img/main-logo.png" width="360px" height="90px" alt=""></a>
+            </div>
+            <div id="nav__right">
+                <ul class="nav__list">
+                    <li>
+                        <a href="about-us.html">About Us</a>
+                    </li>
+                    <li>
+                        <a href="products.html">Products</a>
+                    </li>
+                    <li>
+                        <a href="community.html">Community</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+                <ul id="nav__icon">
+                    <input id="search-input" class="v-hidden" type="text" />
+                    <li id="toggle-vibility">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </li>
+                    <li id="cart-btn"><i class="fa-solid fa-cart-shopping"></i></li>
+                    <li>
+                        <a href="login.html"><i class="fa-solid fa-user-tie"></i><span id="greeting">Log-In</span></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav_padding"></div>
+        </div>
+        <div id="lightoff" class="lightoff-hidden" onclick="lightOn()"></div>
+        <div id="cart">
+            <div id="cart__top">
+                <i class="fa-solid fa-angles-right"></i>
+                <span>Cart</span>
+                <span class="padding">i</span>
+            </div>
+            <div id="cart__container">
+                <span id="cart__empty"></span>
+                <ul id="cart__list"></ul>
+            </div>
+            <div id="cart__bottom">
+                <div id="cart__calculator">
+                    <span id="cart__sum1">Total :</span>
+                    <span id="cart__sum2">0.00</span>
+                </div>
+                <div id="cart__bottom__btndiv">
+                    <a href="cart.html"><button id="cart__viewCart">View Cart</button></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- 헤더  -->
+
+    <main>
+        <h1 class="products_main_name" id="first">Shop</h1> <!--제목-->
+        <div class="products_sidebar"> <!--Side Bar-->
+            <a class="products_a" href="#first">On Sale</a>
+            <a class="products_a" href="#second">Games</a>
+            <a class="products_a" href="#third">Consoles</a>
+            <a class="products_a" href="#forth">Controllers</a>
+            <a class="products_a" href="#fifth">Accessories</a>
+        </div>
+        <div class="products_main"> <!--Main-->
+            <p> <!--On Sale name-->
+            <div class="products_name">On Sale</div> <!--소제목 1-->
+            </p>
+            <div class="products_photo"> <!--On Sale list1-->
+                <div><!--On Sale 1번-->
+                    <div class="products_list">
+                        <a href="products_detail.html"><img class="products_img"
+                                src="https://raw.githubusercontent.com/junyihong/Project01/main/img/console3.webp"></a>
+                    </div>
+                    <div class="products_sale_name_1"><a class="products_sale_1" href="products_detail.html">Game Flow
+                            Black</a>
+                    </div>
+                    <div><a class="products_sale_1" href="products_detail.html">
+                            <del>$999.00</del> -> $900.00</a>
+                    </div>
+                    <button class="products_button"
+                        onclick="handleCartSubmit('./img/console3.webp', 'Game FLow Black', '900.00')">Add to
+                        Cart</button>
+                </div>
+                <div><!--On Sale 2번-->
+                    <div class="products_list">
+                        <a href="products_detail2.html"><img class="products_img"
+                                src="https://raw.githubusercontent.com/junyihong/Project01/main/img/chair2.webp"></a>
+                    </div>
+                    <div class="products_sale_name_2"><a class="products_sale_2" href="products_detail2.html">Mach
+                            Gaming Chair</a>
+                    </div>
+                    <div><a class="products_sale_2" href="products_detail2.html">
+                            <del>$129.99</del> -> $116.99</a>
+                    </div>
+                    <button class="products_button"
+                        onclick="handleCartSubmit('./img/chair2.webp', 'Mach Gaming Chair', '116.99')">Add to
+                        Cart</button>
+                </div>
+                <div><!--On Sale 3번-->
+                    <div class="products_list">
+                        <a href="products_detail3.html"><img class="products_img"
+                                src="https://raw.githubusercontent.com/junyihong/Project01/main/img/Raptor.webp"></a>
+                    </div>
+                    <div class="products_sale_name_3"><a class="products_sale_3" href="products_detail3.html">Raptor</a></div>
+                    <div><a class="products_sale_3" href="products_detail3.html">
+                            <del>$29.99</del> -> $26.99</a>
+                    </div>
+                    <button class="products_button"
+                        onclick="handleCartSubmit('./img/Raptor.webp', 'Raptor', '26.99')">Add to Cart</button>
+                </div>
+            </div>
+            <div class="products_photo"> <!--On Sale list2-->
+                <div><!--On Sale 4번-->
+                    <div class="products_list">
+                        <a href="Kira and the Fading Islands.html"><img class="products_img"
+                                src="https://raw.githubusercontent.com/junyihong/Project01/main/img/game4.webp"></a>
+                    </div>
+                    <div>
+                        <div class="products_sale_name_4"><a class="products_sale_4"
+                                href="Kira and the Fading Islands.html">Kira and the Fading
+                                Islands</a></div>
+                        <a class="products_sale_4" href="Kira and the Fading Islands.html">
+                            <del>$39.99</del> -> ₩35.99</a>
+                    </div>
+                    <button class="products_button"
+                        onclick="handleCartSubmit('./img/game4.webp', 'Kira and the Fading Island', '35.99')">Add to
+                        Cart</button>
+                </div>
+                <div><!--On Sale 5번-->
+                    <div class="products_list">
+                        <a href="Gameflow.html"><img class="products_img"
+                                src="https://raw.githubusercontent.com/junyihong/Project01/main/img/console4.webp"></a>
+                    </div>
+                    <div>
+                        <div class="products_sale_name_5"><a class="products_sale_5" href="Gameflow.html">Game Flow</a>
+                        </div>
+                        <a class="products_sale_5" href="Gameflow.html">
+                            <del>$999.00</del> -> $900.00</a>
+                    </div>
+                    <button class="products_button"
+                        onclick="handleCartSubmit('./img/console4.webp', 'Game Flow', '900.00')">Add to Cart</button>
+                </div>
+                <div><!--On Sale 6번-->
+                    <div class="products_list">
+                        <a href="L503 Headset.html"><img class="products_img"
+                                src="https://raw.githubusercontent.com/junyihong/Project01/main/img/headset2.webp"></a>
+                    </div>
+                    <div>
+                        <div class="products_sale_name_6"><a class="products_sale_6" href="L503 Headset.html">L503
+                                Headset</a>
+                        </div>
+                        <a class="products_sale_6" href="L503 Headset.html">
+                            <del>$29.99</del> -> $26.99</a>
+                    </div>
+                    <button class="products_button"
+                        onclick="handleCartSubmit('./img/headset2.webp', 'L503 Headset', '26.99')">Add to Cart</button>
+                </div>
+            </div>
+            <div class="products_photo"> <!--On Sale list3-->
+                <div><!--On Sale 7번-->
+                    <div class="products_list">
+                        <a href="Dead at last.html"><img class="products_img"
+                                src="https://raw.githubusercontent.com/junyihong/Project01/main/img/game3.webp"></a>
+                    </div>
+                    <div>
+                        <div id="second">
+                            <div class="products_sale_name_7"><a class="products_sale_7" href="Dead at last.html">Dead
+                                    at Last</a>
+                            </div>
+                            <a class="products_sale_7" href="Dead at last.html">
+                                <del>$39.99</del> -> $35.99</a>
+                        </div>
+                        <button class="products_button"
+                            onclick="handleCartSubmit('./img/game3.webp', 'Dead at Last', '35.99')">Add to Cart</button>
+                    </div>
+                </div>
+                <div><!--On Sale 8번-->
+                    <div class="products_list">
+                        <a href="Spartan Mechnical keyboard.html"><img class="products_img"
+                                src="https://raw.githubusercontent.com/junyihong/Project01/main/img/keyboard1.webp"></a>
+                    </div>
+                    <div>
+                        <div class="products_sale_name_8"><a class="products_sale_8"
+                                href="Spartan Mechnical keyboard.html">Spartan Mechanical
+                                Keyboard</a></div>
+                        <a class="products_sale_8" href="Spartan Mechnical keyboard.html">
+                            <del>$44.99</del> -> $40.49</a>
+                    </div>
+                    <button class="products_button"
+                        onclick="handleCartSubmit('./img/keyboard1.webp', 'Spartan Mechanical Keyboard', '40.49')">Add
+                        to Cart</button>
+                </div>
+                <div><!--On Sale 9번-->
+                    <div class="products_list">
+                        <a href="Ghost"><img class="products_img"
+                                src="https://raw.githubusercontent.com/junyihong/Project01/main/img/controler6.webp"></a>
+                    </div>
+                    <div>
+                        <div class="products_sale_name_9"><a class="products_sale_9" href="Ghost">Ghost</a></div>
+                        <a class="products_sale_9" href="Ghost">
+                            <del>$29.99</del> -> $26.99</a>
+                    </div>
+                    <button class="products_button"
+                        onclick="handleCartSubmit('./img/controler6.webp', 'Ghost', '26.99')">Add to Cart</button>
+                </div>
+            </div>
+            <p> <!--Games name-->
+            <div class="products_name" id="second">Games</div> <!--소제목 2-->
+            </p>
+            <div class="products_photo"> <!--Games list1-->
+                <div><!--Games 1번-->
+                    <div class="products_list">
+                        <a href="Chronosplit.html"><img class="products_img"
+                                src="https://raw.githubusercontent.com/junyihong/Project01/main/img/game1.webp"></a>
+                    </div>
+                    <div>
+                        <div class="products_games_name_1"><a class="products_games_1"
+                                href="Chronosplit.html">Chronosplit</a>
+                        </div>
+                        <a class="products_games_1" href="Chronosplit.html">$39.99</a>
+                    </div>
+                    <button class="products_button"
+                        onclick="handleCartSubmit('./img/game1.webp', 'Chronosplit', '39.99')">Add to Cart</button>
+                </div>
+                <div><!--Games 2번-->
+                    <div class="products_list">
+                        <a href="Ancient.html"><img class="products_img"
+                                src="https://raw.githubusercontent.com/junyihong/Project01/main/img/game2.webp"></a>
+                    </div>
+                    <div>
+                        <div class="products_games_name_2"><a class="products_games_2" href="Ancient.html">Ancient
+                                Souls</a>
+                        </div>
+                        <a class="products_games_2" href="Ancient.html">$39.99</a>
+                    </div>
+                    <button class="products_button"
+                        onclick="handleCartSubmit('./img/game2.webp', 'Ancient Souls', '39.99')">Add to Cart</button>
+                </div>
+                <div><!--Games 3번-->
+                    <div class="products_list">
+                        <a href="Dead at Last.html"><img class="products_img"
+                                src="https://raw.githubusercontent.com/junyihong/Project01/main/img/game3.webp"></a>
+                    </div>
+                    <div>
+                        <div class="products_games_name_3"><a class="products_games_3" href="Dead at Last.html">Dead at
+                                Last</a>
+                        </div>
+                        <a class="products_games_3" href="Dead at Last.html"><del>$39.99</del> -> $35.99</a>
+                    </div>
+                    <button class="products_button"
+                        onclick="handleCartSubmit('./img/game3.webp', 'Dead at Last', '35.99')">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="products_photo"> <!--Games list2-->
+                <div><!--Games 4번-->
+                    <div class="products_list">
+                        <a href="Kira and the Fading Islands.html"><img class="products_img"
+                                src="https://raw.githubusercontent.com/junyihong/Project01/main/img/game4.webp"></a>
+                    </div>
+                    <div>
+                        <div id="third">
+                            <div class="products_games_name_4"><a class="products_games_4"
+                                    href="Kira and the Fading Islands.html">Kira and the
+                                    Fading
+                                    Islands</a></div>
+                            <a class="products_games_4" href="Kira and the Fading Islands.html"><del>$39.99</del> ->
+                                ₩35.99</a>
+                        </div>
+                        <button class="products_button"
+                            onclick="handleCartSubmit('./img/game4.webp', 'Kira and the Fading Island', '35.99')">Add to
+                            Cart</button>
+                    </div>
+                </div>
+                <div><!--Games 5번-->
+                    <div class="products_list">
+                        <a href="Ice Dome:Exile.html"><img class="products_img"
+                                src="https://raw.githubusercontent.com/junyihong/Project01/main/img/game5.webp"></a>
+                    </div>
+                    <div>
+                        <div class="products_games_name_5"><a class="products_games_5" href="Ice Dome:Exile.html">Ice
+                                Dome:Exile</a>
+                        </div>
+                        <a class="products_games_5" href="Ice Dome:Exile.html">$39.99</a>
+                    </div>
+                    <button class="products_button"
+                        onclick="handleCartSubmit('./img/game5.webp', 'Ice Dome:Exile', '39.99')">Add to
+                        Cart</button>
+                </div>
+                <div><!--Games 6번-->
+                    <div class="products_list">
+                        <a href="Cyber Kid Infinte.html"><img class="products_img"
+                                src="https://raw.githubusercontent.com/junyihong/Project01/main/img/game6.webp"></a>
+                    </div>
+                    <div>
+                        <div class="products_games_name_6"><a class="products_games_6"
+                                href="Cyber Kid Infinte.html">Cyber
+                                Kid
+                                Infinte</a>
+                        </div>
+                        <a class="products_games_6" href="Cyber Kid Infinte.html">$39.99</a>
+                    </div>
+                    <button class="products_button"
+                        onclick="handleCartSubmit('./img/game6.webp', 'Cyber Kid Infinte', '39.99')">Add to
+                        Cart</button>
+                </div>
+            </div>
+        
+        <p> <!--Consoles name-->
+        <div class="products_name" id="third">Consoles</div> <!--소제목 3-->
+        </p>
+        <div class="products_photo"> <!--Consoles list1-->
+            <div><!--Consoles 1번-->
+                <div class="products_list">
+                    <a href="Playbox XZ Gold Edition.html"><img class="products_img"
+                            src="https://raw.githubusercontent.com/junyihong/Project01/main/img/console1.webp"></a>
+                </div>
+                <div>
+                    <div class="products_consoles_name_1"><a class="products_consoles_1"
+                            href="Playbox XZ Gold Edition.html">Playbox XZ
+                            Gold Edition</a></div>
+                    <a class="products_consoles_1" href="Playbox XZ Gold Edition.html">$1000.00</a>
+                </div>
+                <button class="products_button"
+                    onclick="handleCartSubmit('./img/console1.webp', 'Playbox XZ Gold Edition', '1000.00')">Add to
+                    Cart</button>
+            </div>
+            <div><!--Consoles 2번-->
+                <div class="products_list">
+                    <a href="Wave Gen RX.html"><img class="products_img"
+                            src="https://raw.githubusercontent.com/junyihong/Project01/main/img/console2.webp"></a>
+                </div>
+                <div>
+                    <div class="products_consoles_name_2"><a class="products_consoles_2" href="Wave Gen RX.html">Wave
+                            Gen
+                            RX</a></div>
+                    <a class="products_consoles_2" href="Wave Gen RX.html">$579.99</a>
+                </div>
+                <button class="products_button"
+                    onclick="handleCartSubmit('./img/console2.webp', 'Wave Gen RX', '579.99')">Add to Cart</button>
+            </div>
+            <div><!--Consoles 3번-->
+                <div class="products_list">
+                    <a href="Gameflow Black.html"><img class="products_img"
+                            src="https://raw.githubusercontent.com/junyihong/Project01/main/img/console3.webp"></a>
+                </div>
+                <div>
+                    <div class="products_consoles_name_3"><a class="products_consoles_3" href="Gameflow Black.html">Game
+                            Flow
+                            Black</a></div>
+                    <a class="products_consoles_3" href="Gameflow Black.html"> <del>$999.00</del> -> $900.00</a>
+                </div>
+                <button class="products_button"
+                    onclick="handleCartSubmit('./img/console3.webp', 'Game FLow Black', '900.00')">Add to
+                    Cart</button>
+            </div>
+        </div>
+        <div class="products_photo"> <!--Consoles list2-->
+            <div><!--Consoles 4번-->
+                <div class="products_list">
+                    <a href="Game flow.html"><img class="products_img"
+                            src="https://raw.githubusercontent.com/junyihong/Project01/main/img/console4.webp"></a>
+                </div>
+                <div>
+                    <div id="forth">
+                        <div class="products_consoles_name_4"><a class="products_consoles_4" href="Game flow.html">Game
+                                Flow</a>
+                        </div>
+                        <a class="products_consoles_4" href="Game flow.html"><del>$999.00</del> -> $900.00</a>
+                    </div>
+                    <button class="products_button"
+                        onclick="handleCartSubmit('./img/console4.webp', 'Game Flow', '900.00')">Add to Cart</button>
+                </div>
+            </div>
+            <div><!--Consoles 5번-->
+                <div class="products_list">
+                    <a href="Playbox XZ.html"><img class="products_img"
+                            src="https://raw.githubusercontent.com/junyihong/Project01/main/img/console5.webp"></a>
+                </div>
+                <div>
+                    <div class="products_consoles_name_5"><a class="products_consoles_5" href="Playbox XZ.html">Playbox
+                            XZ</a>
+                    </div>
+                    <a class="products_consoles_5" href="Playbox XZ.html">$579.99</a>
+                </div>
+                <button class="products_button"
+                    onclick="handleCartSubmit('./img/console5.webp', 'Playbox XZ', '579.99')">Add
+                    to Cart</button>
+            </div>
+            <div><!--Consoles 6번-->
+                <div class="products_list">
+                    <a href="Veritas VR Set.html"><img class="products_img"
+                            src="https://raw.githubusercontent.com/junyihong/Project01/main/img/vr.webp"></a>
+                </div>
+                <div>
+                    <div class="products_consoles_name_6"><a class="products_consoles_6"
+                            href="Veritas VR Set.html">Veritas
+                            VR
+                            Set</a></div>
+                    <a class="products_consoles_6" href="Veritas VR Set.html">$629.99</a>
+                </div>
+                <button class="products_button"
+                    onclick="handleCartSubmit('./img/vr.webp', 'Veritas VR Set', '629.99')">Add to Cart</button>
+            </div>
+        </div>
+        
+        <p> <!--Controllers name-->
+        <div class="products_name" id="forth">Controllers</div> <!--소제목 4-->
+        </p>
+        <div class="products_photo"> <!--Controllers list1-->
+            <div><!--Controllers 1번-->
+                <div class="products_list">
+                    <a href="Wave.html"><img class="products_img"
+                            src="https://raw.githubusercontent.com/junyihong/Project01/main/img/controler1.webp"></a>
+                </div>
+                <div>
+                    <div class="products_controllers_name_1"><a class="products_controllers_1" href="Wave.html">Wave</a>
+                    </div>
+                    <a class="products_controllers_1" href="Wave.html">$29.99</a>
+                </div>
+                <button class="products_button" onclick="handleCartSubmit('./img/controler1.webp', 'Wave', '29.99')">Add
+                    to Cart</button>
+            </div>
+            <div><!--Controllers 2번-->
+                <div class="products_list">
+                    <a href="Flint.html"><img class="products_img"
+                            src="https://raw.githubusercontent.com/junyihong/Project01/main/img/controler2.webp"></a>
+                </div>
+                <div>
+                    <div class="products_controllers_name_2"><a class="products_controllers_2"
+                            href="Flint.html">Flint</a></div>
+                    <a class="products_controllers_2" href="Flint.html">$29.99</a>
+                </div>
+                <button class="products_button" onclick="handleCartSubmit('./img/controler4.webp', 'Flint', '29.99')">Add
+                    to Cart</button>
+            </div>
+            <div><!--Controllers 3번-->
+                <div class="products_list">
+                    <a href="Libra2.0.html"><img class="products_img"
+                            src="https://raw.githubusercontent.com/junyihong/Project01/main/img/controler3.webp"></a>
+                </div>
+                <div>
+                    <div class="products_controllers_name_3"><a class="products_controllers_3"
+                            href="Libra2.0.html">Libra2.0</a></div>
+                    <a class="products_controllers_3" href="Libra2.0.html">$29.99</a>
+                </div>
+                <button class="products_button"
+                    onclick="handleCartSubmit('./img/controler3.webp', 'Libra2.0', '29.99')">Add to Cart</button>
+            </div>
+        </div>
+        <div class="products_photo"> <!--Controllers list2-->
+            <div><!--Controllers 4번-->
+                <div class="products_list">
+                    <a href="Stealth X.html"><img class="products_img"
+                            src="https://raw.githubusercontent.com/junyihong/Project01/main/img/controler4.webp"></a>
+                </div>
+                <div>
+                    <div id="fifth">
+                        <div class="products_controllers_name_4"><a class="products_controllers_4"
+                                href="Stealth X.html">Stealth
+                                X</a></div>
+                        <a class="products_controllers_4" href="Stealth X.html">$29.99</a>
+                    </div>
+                    <button class="products_button"
+                        onclick="handleCartSubmit('./img/controler2.webp', 'Stealth X', '29.99')">Add to Cart</button>
+                </div>
+            </div>
+            <div><!--Controllers 5번-->
+                <div class="products_list">
+                    <a href="Ghost.html"><img class="products_img"
+                            src="https://raw.githubusercontent.com/junyihong/Project01/main/img/controler6.webp"></a>
+                </div>
+                <div>
+                    <div class="products_controllers_name_5"><a class="products_controllers_5"
+                            href="Ghost.html">Ghost</a></div>
+                    <a class="products_controllers_5" href="Ghost.html"><del>$29.99</del> -> $26.99</a>
+                </div>
+                <button class="products_button" onclick="handleCartSubmit('./img/controler6.webp', 'Ghost', '26.99')">Add
+                    to Cart</button>
+            </div>
+            <div><!--Controllers 6번-->
+                <div class="products_list">
+                    <a href="Raptor.html"><img class="products_img"
+                            src="https://raw.githubusercontent.com/junyihong/Project01/main/img/Raptor.webp"></a>
+                </div>
+                <div>
+
+                    <div class="products_controllers_name_6"><a class="products_controllers_6"
+                            href="Raptor.html">Raptor</a>
+                    </div>
+                    <a class="products_controllers_6" href="Raptor.html"> <del>$29.99</del> -> $26.99</a>
+
+                    <button class="products_button"
+                        onclick="handleCartSubmit('./img/Raptor.webp', 'Raptor', '26.99')">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <p> <!--Accessories name-->
+        <div class="products_name" id="fifth">Accessories</div> <!--소제목 5-->
+        </p>
+        <div class="products_photo"> <!--Accessories list1-->
+            <div><!--Accessories 1번-->
+                <div class="products_list">
+                    <a href="Echo Headset.html"><img class="products_img"
+                            src="https://raw.githubusercontent.com/junyihong/Project01/main/img/headset1.webp"></a>
+                </div>
+                <div>
+                    <div class="products_accessories_name_1"><a class="products_accessories_1"
+                            href="Echo Headset.html">Echo
+                            Headset</a>
+                    </div>
+                    <a class="products_accessories_1" href="Echo Headset.html">$39.99</a>
+                </div>
+                <button class="products_button"
+                    onclick="handleCartSubmit('./img/headset1.webp', 'Echo Headset', '39.99')">Add to Cart</button>
+            </div>
+            <div><!--Accessories 2번-->
+                <div class="products_list">
+                    <a href="L503 Headset.html"><img class="products_img"
+                            src="https://raw.githubusercontent.com/junyihong/Project01/main/img/headset2.webp"></a>
+                </div>
+                <div>
+                    <div class="products_accessories_name_2"><a class="products_accessories_2"
+                            href="L503 Headset.html">L503
+                            Headset</a>
+                    </div>
+                    <a class="products_accessories_2" href="L503 Headset.html"> <del>$29.99</del> -> $26.99</a>
+                </div>
+                <button class="products_button"
+                    onclick="handleCartSubmit('./img/headset2.webp', 'L503 Headset', '26.99')">Add to Cart</button>
+            </div>
+            <div><!--Accessories 3번-->
+                <div class="products_list">
+                    <a href="Impact Gaming Chair.html"><img class="products_img"
+                            src="https://raw.githubusercontent.com/junyihong/Project01/main/img/chair1.webp"></a>
+                </div>
+                <div>
+                    <div class="products_accessories_name_3"><a class="products_accessories_3"
+                            href="Impact Gaming Chair.html">Impact
+                            Gaming Chair</a></div>
+                    <a class="products_accessories_3" href="Impact Gaming Chair.html">$159.99</a>
+                </div>
+                <button class="products_button"
+                    onclick="handleCartSubmit('./img/chair1.webp', 'Impact Gaming Chair', '2159.99')">Add to
+                    Cart</button>
+            </div>
+        </div>
+        <div class="products_photo"> <!--Accessories list2-->
+            <div><!--Accessories 4번-->
+                <div class="products_list">
+                    <a href="Mach Gaming Chair.html"><img class="products_img"
+                            src="https://raw.githubusercontent.com/junyihong/Project01/main/img/chair2.webp"></a>
+                </div>
+                <div>
+                    <div class="products_accessories_name_4"><a class="products_accessories_4"
+                            href="Mach Gaming Chair.html">Mach
+                            Gaming Chair</a></div>
+                    <a class="products_accessories_4" href="Mach Gaming Chair.html"><del>$129.99</del> -> $116.99</a>
+                </div>
+                <button class="products_button"
+                    onclick="handleCartSubmit('./img/chair2.webp', 'Mach Gaming Chair', '116.99')">Add to
+                    Cart</button>
+            </div>
+            <div><!--Accessories 5번-->
+                <div class="products_list">
+                    <a href="X-2 Wireless Mouse.html"><img class="products_img"
+                            src="https://raw.githubusercontent.com/junyihong/Project01/main/img/mouse1.webp"></a>
+                </div>
+                <div>
+                    <div class="products_accessories_name_5"><a class="products_accessories_5"
+                            href="X-2 Wireless Mouse.html">X-2
+                            Wireless Mouse</a>
+                    </div>
+                    <a class="products_accessories_5" href="X-2 Wireless Mouse.html">$24.99</a>
+                </div>
+                <button class="products_button"
+                    onclick="handleCartSubmit('./img/mouse1.webp', 'X-2 Wireless Mouse', '24.99')">Add to
+                    Cart</button>
+            </div>
+            <div><!--Accessories 6번-->
+                <div class="products_list">
+                    <a href="Blaze Wireless Mouse.html"><img class="products_img"
+                            src="https://raw.githubusercontent.com/junyihong/Project01/main/img/mouse2.webp"></a>
+                </div>
+                <div>
+                    <div class="products_accessories_name_6"><a class="products_accessories_6"
+                            href="Blaze Wireless Mouse.html">Blaze
+                            Wireless Mouse</a>
+                    </div>
+                    <a class="products_accessories_6" href="Blaze Wireless Mouse.html">$24.99</a>
+                </div>
+                <button class="products_button"
+                    onclick="handleCartSubmit('./img/mouse2.webp', 'Blaze Wireless Mouse', '24.99')">Add to
+                    Cart</button>
+            </div>
+        </div>
+        <div class="products_photo"> <!--Accessories list3-->
+            <div><!--Accessories 7번-->
+                <div class="products_list">
+                    <a href="Spartan Mechanical Keyboard.html"><img class="products_img"
+                            src="https://raw.githubusercontent.com/junyihong/Project01/main/img/keyboard1.webp"></a>
+                </div>
+                <div>
+                    <div class="products_accessories_name_7"><a class="products_accessories_7"
+                            href="Spartan Mechanical Keyboard.html">Spartan
+                            Mechanical Keyboard</a>
+                    </div>
+                    <a class="products_accessories_7" href="Spartan Mechanical Keyboard.html"><del>$44.99</del> ->
+                        $40.49</a>
+
+                </div>
+                <button class="products_button"
+                    onclick="handleCartSubmit('./img/keyboard1.webp', 'Spartan Mechanical Keyboard', '40.49')">Add to
+                    Cart</button>
+            </div>
+            <div><!--Accessories 8번-->
+                <div class="products_list">
+                    <a href="Co-21 Mechanical Keyboard.html"><img class="products_img"
+                            src="https://raw.githubusercontent.com/junyihong/Project01/main/img/keyboard2.webp"></a>
+                </div>
+                <div>
+                    <div class="products_accessories_name_8"><a class="products_accessories_8"
+                            href="Co-21 Mechanical Keyboard.html">Co-21
+                            Mechanical Keyboard</a>
+                    </div>
+                    <a class="products_accessories_8" href="Co-21 Mechanical Keyboard.html">$44.99</a>
+                </div>
+                <button class="products_button"
+                    onclick="handleCartSubmit('./img/keyboard2.webp', 'Co-21 Mechanical Keyboard', '44.99')">Add to
+                    Cart</button>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div id="foot__top">
+            <div class="foot__upperbox">
+                <h1><i class="fa-brands fa-accusoft"></i> WAGs</h1>
+            </div>
+            <div class="foot__upperbox">
+                <ul>
+                    <span class="foot__firstline">Products</span>
+                    <li>Games</li>
+                    <li>Consoles</li>
+                    <li>Controllers</li>
+                    <li>Accessories</li>
+                </ul>
+            </div>
+            <div class="foot__upperbox">
+                <ul>
+                    <span class="foot__firstline">Store</span>
+                    <li>
+                        500 Terry Francois Street <br />
+                        San Francisco, CA94158
+                    </li>
+                    <li>Mon-Fri: 9am - 9pm</li>
+                    <li>info@mysite.com</li>
+                    <li>123-456-7890</li>
+                </ul>
+            </div>
+            <div class="foot__upperbox">
+                <span class="foot__firstline">Policy</span>
+                <ul>
+                    <li>Terms & Conditions</li>
+                    <li>Shipping Policy</li>
+                    <li>Privacy Policy</li>
+                    <li>Cookie Policy</li>
+                    <li>FAQ</li>
+                </ul>
+            </div>
+        </div>
+        <div class="line">&nbsp;</div>
+        <div id="foot__bottom">
+            <div class="foot__underbox">
+                <span id="pay">Payment Methods</span><br />
+                <img src="/img/pay.PNG" />
+            </div>
+            <div class="foot__underbox">
+                <span id="pay">Join the Community</span><br />
+                <img src="/img/join.png" />
+            </div>
+        </div>
+    </footer>
+
+    <div class="chat">
+        <button class="bot">
+            <i class="fa-solid fa-comment-dots"></i>
+        </button>
+        <div class="text__icon">
+            <div class="chat__top">
+                <img src="img/chat-logo.png" id="chat__top__img">
+                <p id="chat__top__p">
+                    <span id="chat__top__name">WAGs</span><br>
+                    <span id="chat__top__reply">We’ll reply as soon as we can.</span>
+                </p>
+                <button id="chat__top__btn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div id="chat__middle">
+                <div id="chat__new">
+                    <span>NEW MESSAGE</span>
+                </div>
+                <div class="chat__message">
+                    <div class="mk2">
+                        Hey there, please leave your details so we can contact you even if
+                        you are no longer on the site.
+                    </div>
+                </div>
+                <div class="chat__message1">
+                    <br />
+                    <input class="mk" type="text" placeholder="Name" /><br>
+                    <br />
+                    <input class="mk" type="email" placeholder="E-mail" />
+                    <br />
+                    <button class="submit_btn" value="">submit</button>
+                </div>
+            </div>
+            <div class="text__string">
+                <input class="tex" type="text" placeholder="Type your message" />
+                <i class="fa-regular fa-face-smile"></i>
+                <i class="fa-solid fa-paperclip"></i>
+            </div>
+        </div>
+    </div>
+    <script src="js/cart.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/index-greeting.js"></script>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="https://kit.fontawesome.com/0f1871673a.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

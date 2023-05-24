@@ -1,0 +1,138 @@
+#main__second {
+  background-color: black;
+  width: 100%;
+  justify-content: center;
+  height: 900px;
+}
+.main__title__box {
+  padding: 70px 7%;
+  display: flex;
+  justify-content: space-between;
+}
+.main__title {
+  color: white;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 100%;
+  font-family: "Montserrat";
+}
+#main2__title {
+  padding-top: 150px;
+}
+.go-to-products-btn2 {
+  margin-top: 20px;
+  background-color: white;
+  border: none;
+  padding: 5px 30px;
+  color: rgb(136, 88, 237);
+  font-weight: 700;
+  font-size: 18px;
+  border-radius: 25px;
+  font-family: "Montserrat";
+  transition: 0.3s linear;
+  border: 2px solid white;
+  cursor: pointer;
+}
+.go-to-products-btn2:hover {
+  background-color: rgb(136, 88, 237);
+  color: white;
+}
+#main__second__contents {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+#slide__wrapper {
+  position: relative;
+  width: 1650px;
+  margin: 0 auto;
+  height: 540px;
+  overflow: hidden;
+}
+.slides {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.animated {
+  transition: 0.5s ease-out;
+}
+.slides li {
+  float: left;
+  list-style-type: none;
+  color: white;
+  font-size: 25px;
+  flex-direction: column;
+  text-align: center;
+}
+.slides li:not(:last-child) {
+  margin-right: 30px;
+}
+.slides li p {
+  margin-top: 10px;
+}
+.best-img-box {
+  width: 390px;
+  height: 390px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.best-img-box img {
+  width: 390px;
+  border-radius: 20px;
+  height: 390px;
+  transform: none;
+}
+
+.best-img-box img:hover {
+  transform: scale(1.15);
+  transition: transform 0.5s;
+}
+
+.best-price {
+  font-size: 20px;
+}
+.best-btn {
+  color: white;
+  font-size: 18px;
+  background-color: #8858ed;
+  border: 1px solid #8858ed;
+  padding: 10px 100px;
+  font-family: "Montserrat";
+  font-weight: 700;
+  margin-top: 10px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.5s ease-in-out all;
+}
+.best-btn:hover{
+  color: #8858ed;
+  background-color: white;
+  border: 1px solid #8858ed;
+}
+
+/* ----------------------------------------------------------------- */
+.prev,
+.next {
+  color: white;
+  position: relative;
+  text-align: center;
+  font-size: 50px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.prev {
+  padding-left: 50px;
+}
+
+.next {
+  padding-right: 50px;
+}
+.prev:hover,
+.next:hover {
+  color: #8858ed;
+}

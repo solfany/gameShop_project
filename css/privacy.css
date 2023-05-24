@@ -1,0 +1,134 @@
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        @keyframes pulsate {
+            100% {
+                /* Larger blur radius */
+                text-shadow: 0 0 4px #fff, 0 0 11px rgb(0, 0, 0), 0 0 19px #fff, 0 0 40px rgb(0, 174, 255), 0 0 80px rgb(2, 120, 255), 0 0 90px rgb(204, 0, 255), 0 0 100px rgb(183, 0, 255), 0 0 150px #0fa;
+            }
+
+            0% {
+                /* Smaller blur radius */
+                text-shadow: 0 0 2px #fff, 0 0 4px rgb(255, 253, 253), 0 0 6px #fff, 0 0 10px rgb(0, 174, 255), 0 0 45px rgb(0, 174, 255), 0 0 55px rgb(140, 0, 255), 0 0 70px rgb(183, 0, 255), 0 0 80px rgb(0, 174, 255);
+            }
+        }
+
+        h2 {
+            margin-top: 20px;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            text-shadow: 50px;
+            animation: pulsate 1.51s ease-in-out infinite alternate;
+        }
+
+        /* 리셋   */
+
+        /* 전체 폼  */
+        #joinForm {
+            border-radius: 15px;
+            width: 800px;
+            margin: 0 auto;
+            margin-top: 0px;
+            padding: 32px;
+            border: 1px solid #7c7c7c;
+            background: #ffffff;
+            opacity: 0.8;
+            box-shadow: 20px 20px 20px rgb(0, 0, 0);
+        }
+
+        body {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .bg {
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+            margin: 0px auto;
+            position: relative;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+        }
+
+        .text {
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+
+        @media(max-width:2980px) {
+            .bg {
+                height: 1080px;
+            }
+
+            video {
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+
+        a {
+            text-decoration: none;
+        }
+
+
+        .checkBox textarea {
+            width: 98%;
+            height: 100px;
+            margin: 0 2%;
+            background-color: #ebebeb;
+            color: rgb(0, 0, 0);
+            border: none;
+            border-radius: 15px;
+
+        }
+
+        .footBtwrap {
+            margin-top: 15px;
+        }
+
+
+
+
+        li {
+            list-style-type: none;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        .btn {
+
+            background: rgba(89, 0, 255, 0.6);
+            background-position: center;
+            transition: 0.8s;
+            /* color: rgb(255, 255, 255); */
+            border: 1px solid #000000;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 15px;
+            color: rgb(255, 255, 255);
+            transition: all 0.5s, color 0.3;
+            height: 50px;
+            width: 49%;
+        }
+
+        .btn:hover {
+            box-shadow: 0 80px 0 0 rgba(195, 0, 255, 0.25) inset,
+                0 -80px 0 0 rgba(0, 0, 0, 0.25) inset;
+
+        }

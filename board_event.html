@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이벤트 게시판</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="js/jquery-3.6.3.min.js"></script>
+  <script src="js/chat-bot.js"></script>
+</head>
+
+<body>
+   <!-- 헤더  -->
+   <header>
+    <div id="nav">
+      <div id="nav__logo">
+        <a href="index.html"><img src="img/main-logo.png" width="360px" height="90px" alt=""></a>
+      </div>
+      <div id="nav__right">
+        <ul class="nav__list">
+          <li>
+            <a href="about-us.html">About Us</a>
+          </li>
+          <li>
+            <a href="products.html">Products</a>
+          </li>
+          <li>
+            <a href="community.html">Community</a>
+          </li>
+          <li>
+            <a href="contact.html">Contact Us</a>
+          </li>
+        </ul>
+        <ul id="nav__icon">
+          <input id="search-input" class="v-hidden" type="text" />
+          <li id="toggle-vibility">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </li>
+          <li id="cart-btn"><i class="fa-solid fa-cart-shopping"></i></li>
+          <li>
+            <a href="login.html"><i class="fa-solid fa-user-tie"></i><span id="greeting">Log-In</span></a>
+          </li>
+        </ul>
+      </div>
+      <div class="nav_padding"></div>
+    </div>
+    <div id="lightoff" class="lightoff-hidden" onclick="lightOn()"></div>
+    <div id="cart">
+      <div id="cart__top">
+        <i class="fa-solid fa-angles-right"></i>
+        <span>Cart</span>
+        <span class="padding">i</span>
+      </div>
+      <div id="cart__container">
+        <span id="cart__empty">Cart is empty</span>
+        <ul id="cart__list"></ul>
+      </div>
+      <div id="cart__bottom">
+        <div id="cart__calculator">
+          <span id="cart__sum1">Total :</span>
+          <span id="cart__sum2">0.00</span>
+        </div>
+        <div id="cart__bottom__btndiv">
+          <a href="cart.html"><button id="cart__viewCart" >View Cart</button></a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- 헤더  -->
+
+  <main class="Board">
+    <div class="commu_menu">
+      <a class="commu_bar" href="board_all.html">전체 글보기</a><hr>
+      <a class="commu_bar" href="board_notice.html">공지사항</a>
+      <a class="commu_bar" href="board_event.html">이벤트</a>
+      <a class="commu_bar" href="#">자유 게시판</a>
+      <a class="commu_bar" href="#">Q&A</a>
+  </div>
+  <div class="Board_main">
+  <div class="Board_title">이벤트 게시판</div>
+    <div class="Board_sub">
+        <input type="text" value="" class="Search_text">
+        <button type="button" class="Search_btn">검색</button>
+    </div>
+     <table class="Board_table">
+        <tr>
+            <th>번호</th>
+            <th>제목</th>
+            <th>작성자</th>
+            <th>작성일</th>
+            <th>조회수</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td></td>
+            <td>김솔비</td>
+            <td>작성일자</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td></td>
+            <td>홍준이</td>
+            <td>작성일자</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td></td>
+            <td>조정원</td>
+            <td>작성일자</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td></td>
+            <td>지성현</td>
+            <td>작성일자</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td></td>
+            <td>김자겸</td>
+            <td>작성일자</td>
+            <td>0</td>
+        </tr>
+     </table>
+     <div class="writing">
+      <form method="" action="writing.html">
+        <button tpye="button" class="writing_btn" onclick="location.href='writing.html';">글쓰기</button>
+      </form>
+     </div>
+     <div class="pagenum">
+        <ul>
+            <li>이전</li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>다음</li>
+        </ul>
+     </div></div>
+  </main>
+   <!-- 푸터 -->
+   <footer>
+    <div id="foot__top">
+      <div class="foot__upperbox">
+        <h1><i class="fa-brands fa-accusoft"></i> WAGs</h1>
+      </div>
+      <div class="foot__upperbox">
+        <ul>
+          <span class="foot__firstline">Products</span>
+          <li>Games</li>
+          <li>Consoles</li>
+          <li>Controllers</li>
+          <li>Accessories</li>
+        </ul>
+      </div>
+      <div class="foot__upperbox">
+        <ul>
+          <span class="foot__firstline">Store</span>
+          <li>
+            500 Terry Francois Street <br />
+            San Francisco, CA94158
+          </li>
+          <li>Mon-Fri: 9am - 9pm</li>
+          <li>info@mysite.com</li>
+          <li>123-456-7890</li>
+        </ul>
+      </div>
+      <div class="foot__upperbox">
+        <span class="foot__firstline">Policy</span>
+        <ul>
+          <li>Terms & Conditions</li>
+          <li>Shipping Policy</li>
+          <li>Privacy Policy</li>
+          <li>Cookie Policy</li>
+          <li>FAQ</li>
+        </ul>
+      </div>
+    </div>
+    <div class="line">&nbsp;</div>
+    <div id="foot__bottom">
+      <div class="foot__underbox">
+        <span id="pay">Payment Methods</span><br />
+        <img src="/img/pay.PNG" />
+      </div>
+      <div class="foot__underbox">
+        <span id="pay">Join the Community</span><br />
+        <img src="/img/join.png" />
+      </div>
+    </div>
+  </footer>
+    <!-- 푸터 -->
+
+    <!-- --chat-- -->
+    <div class="chat">
+      <button class="bot">
+        <i class="fa-solid fa-comment-dots"></i>
+      </button>
+      <div class="text__icon">
+        <div class="chat__top">
+          <img src="img/chat-logo.png" id="chat__top__img">
+          <p id="chat__top__p">
+            <span id="chat__top__name">WAGs</span><br>
+            <span id="chat__top__reply">We’ll reply as soon as we can.</span>
+          </p>
+          <button id="chat__top__btn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div id="chat__middle">
+          <div id="chat__new">
+            <span>NEW MESSAGE</span>
+          </div>
+          <div class="chat__message">
+            <div class="mk2">
+              Hey there, please leave your details so we can contact you even if
+              you are no longer on the site.
+            </div>
+          </div>
+          <div class="chat__message1">
+            <br />
+            <input class="mk" type="text" placeholder="Name" /><br>
+            <br />
+            <input class="mk" type="email" placeholder="E-mail" />
+            <br />
+            <button class="submit_btn" value="">submit</button>
+          </div>
+        </div>
+        <div class="text__string">
+          <input class="tex" type="text" placeholder="Type your message" />
+          <i class="fa-regular fa-face-smile"></i>
+          <i class="fa-solid fa-paperclip"></i>
+        </div>
+      </div>
+    </div>
+    <!-- --chat-- -->
+
+  <script src="js/cart.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/index-greeting.js"></script>
+<script src="js/jquery-3.6.3.min.js"></script>
+<script
+  src="https://kit.fontawesome.com/0f1871673a.js"
+  crossorigin="anonymous"
+></script>
+</body>
+
+</html>

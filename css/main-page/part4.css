@@ -1,0 +1,90 @@
+#main__fourth {
+  display: flex;
+  background-color: black;
+  width: 100%;
+  height: 750px;
+  justify-content: center;
+  overflow: hidden;
+  transition: 0.4s ease-in-out;
+  background-position-y: -20% ;
+
+}
+#main__fourth img {
+  border-radius: 20px;
+  box-shadow: 10px 10px 20px rgb(0, 0, 0), -10px -10px 20px rgb(0, 0, 0);
+}
+#fourth__box1 {
+  float: left;
+  position: relative;
+  top: 120px;
+  left: 150px;
+  background-color: rgb(136, 88, 237);
+  color: white;
+  width: 550px;
+  height: 340px;
+  text-align: center;
+  padding-top: 40px;
+  border-radius: 20px;
+  z-index: 5;
+  box-shadow: 10px 10px 30px rgb(250, 250, 250), -10px -10px 30px rgb(250, 250, 250);
+  transition: 1.5s ease-in-out;
+  opacity: 0;
+}
+#fourth__box1 p {
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+.forth-btn {
+  background-color: white;
+  border: none;
+  padding: 5px 30px;
+  color: rgb(136, 88, 237);
+  font-weight: 700;
+  font-size: 18px;
+  border-radius: 25px;
+  font-family: "Montserrat";
+  transition: 0.3s linear;
+  border: 2px solid white;
+  cursor: pointer;
+}
+.king-big {
+  font-size: 150px;
+  font-weight: 700;
+  font-family: "Montserrat";
+  line-height: 1;
+}
+.fourth-big {
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 1;
+}
+#fourth__box__con {
+  display: flex;
+  position: relative;
+  right: 20px;
+  opacity: 0;
+  transition: 1.5s ease-in-out;
+}
+#fourth__box2 {
+  position: relative;
+  top: 80px;
+  z-index: 2;
+}
+#fourth__box3 {
+  position: relative;
+  top: 160px;
+  right: 2%;
+  z-index: 3;
+}
+#fourth__box4 {
+  position: relative;
+  top: 110px;
+  right: 8%;
+  z-index: 4;
+}
+#fourth__box__con img{
+  box-shadow: 10px 10px 30px rgb(250, 250, 250), -10px -10px 30px rgb(250, 250, 250);
+
+}

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WAGs</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="Project01\css\cart.css" />
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div id="nav">
+        <div id="nav__logo">
+          <a href="index.html"
+            ><img src="img/main-logo.png" width="360px" height="90px" alt=""
+          /></a>
+        </div>
+        <div id="nav__right">
+          <ul class="nav__list">
+            <li>
+              <a href="about-us.html">About Us</a>
+            </li>
+            <li>
+              <a href="products.html">Products</a>
+            </li>
+            <li>
+              <a href="community.html">Community</a>
+            </li>
+            <li>
+              <a href="contact.html">Contact Us</a>
+            </li>
+          </ul>
+          <ul id="nav__icon">
+            <input id="search-input" class="v-hidden" type="text" />
+            <li id="toggle-vibility">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </li>
+            <li id="cart-btn"><i class="fa-solid fa-cart-shopping"></i></li>
+            <li>
+              <a href="login.html"
+                ><i class="fa-solid fa-user-tie"></i
+                ><span id="greeting">Log-In</span></a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="nav_padding"></div>
+      </div>
+      <div id="lightoff" class="lightoff-hidden" onclick="lightOn()"></div>
+      <div id="cart">
+        <div id="cart__top">
+          <i class="fa-solid fa-angles-right"></i>
+          <span>Cart</span>
+          <span class="padding">i</span>
+        </div>
+        <div id="cart__container">
+          <span id="cart__empty"></span>
+          <ul id="cart__list"></ul>
+        </div>
+        <div id="cart__bottom">
+          <div id="cart__calculator">
+            <span id="cart__sum1">Total :</span>
+            <span id="cart__sum2">0.00</span>
+          </div>
+          <div id="cart__bottom__btndiv">
+            <a href="cart copy 1.html"
+              ><button id="cart__viewCart">View Cart</button></a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div id="cart__background__main">
+        <div style="display: inline">
+          <div class="bbbbb">My cart</div>
+          <div><br /></div>
+        </div>
+        <div id="cart_background">
+          <br />
+          <br />
+          <div id="cart_in">
+            <div>
+              <img
+                src="https://static.wixstatic.com/media/c837a6_85410586580e46ce94659e34046a48c8~mv2.jpg/v1/fill/w_100,h_84,al_c,q_85,usm_0.66_1.00_0.01/c837a6_85410586580e46ce94659e34046a48c8~mv2.webp"
+                alt=""
+              />
+              <div class="cart_in_productname">
+                <div>
+                  <a href="products_detail2.html">Match Gaming Chair</a>
+                </div>
+
+                <div><del style="color: gray">$129.99</del> → $116.99</div>
+              </div>
+              <div>
+                <div class="ccaa"><button type="button">x</button></div>
+                <div class="ccaa">&nbsp; $116.99 &nbsp;</div>
+                <div class="ccaa1">
+                  <button>-</button
+                  ><input
+                    class="product__count"
+                    type="count"
+                    placeholder="1"
+                  /><button>+</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="price__box">
+            <div class="to_bu">
+              <div class="to_bn_sub1">sub total</div>
+              <div class="to_bn_sub2">$116.99</div>
+              <br />
+
+              <br />
+              <div><a class="mollu" href="">Estimating Shipping</a></div>
+            </div>
+
+            <div class="total__price__check">
+              <br />
+              <div class="total__price__check1">total price</div>
+              <div class="total__price__check2">$116.99</div>
+            </div>
+          </div>
+        </div>
+        <button class="cart__buy__btn">Add to Cart</button>
+        <br />
+        <button class="add__add__add">Enter a promo code</button>
+        <br />
+        <input
+          type="text"
+          class="enter_a_promo_code"
+          placeholder="Enter a promo code"
+        />
+        <input class="submit__hidden__button" type="submit" value="submit" />
+
+        <br />
+        <button class="add__add__add1">Add a note</button>
+        <br />
+        <input
+          class="enter_a_promo_code1"
+          type="textarea"
+          placeholder="  Instruction? Special requests?"
+        />
+      </div>
+    </main>
+
+    <footer>
+      <div id="foot__top">
+        <div class="foot__upperbox">
+          <h1><i class="fa-brands fa-accusoft"></i> WAGs</h1>
+        </div>
+        <div class="foot__upperbox">
+          <ul>
+            <span class="foot__firstline">Products</span>
+            <li>Games</li>
+            <li>Consoles</li>
+            <li>Controllers</li>
+            <li>Accessories</li>
+          </ul>
+        </div>
+        <div class="foot__upperbox">
+          <ul>
+            <span class="foot__firstline">Store</span>
+            <li>
+              500 Terry Francois Street <br />
+              San Francisco, CA94158
+            </li>
+            <li>Mon-Fri: 9am - 9pm</li>
+            <li>info@mysite.com</li>
+            <li>123-456-7890</li>
+          </ul>
+        </div>
+        <div class="foot__upperbox">
+          <span class="foot__firstline">Policy</span>
+          <ul>
+            <li>Terms & Conditions</li>
+            <li>Shipping Policy</li>
+            <li>Privacy Policy</li>
+            <li>Cookie Policy</li>
+            <li>FAQ</li>
+          </ul>
+        </div>
+      </div>
+      <div class="line">&nbsp;</div>
+      <div id="foot__bottom">
+        <div class="foot__underbox">
+          <span id="pay">Payment Methods</span><br />
+          <img src="../Project01\img\pay.PNG" />
+        </div>
+        <div class="foot__underbox">
+          <span id="pay">Join the Community</span><br />
+          <img src="../Project01\img\join.PNG" />
+        </div>
+      </div>
+      <div class="chat">
+        <button class="bot">
+          <i class="fa-solid fa-comment-dots"></i>
+        </button>
+        <div class="text__icon__pidAlone">
+          <div class="chat__top">
+            <img src="../Project01\img\chat-logo.png" id="chat__top__img" />
+            <p id="chat__top__p">
+              <span id="chat__top__name">WAGs</span><br />
+              <span id="chat__top__reply">We’ll reply as soon as we can.</span>
+            </p>
+            <button id="chat__top__btn">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          <div id="chat__middle">
+            <div id="chat__new">
+              <span>NEW MESSAGE</span>
+            </div>
+            <div class="chat__message">
+              <div class="mk2">
+                Hey there, please leave your details so we can contact you even
+                if you are no longer on the site.
+              </div>
+            </div>
+            <div class="chat__message1">
+              <br />
+              <input class="mk" type="text" placeholder="Name" />
+              <br />
+              <input class="mk" type="email" placeholder="E-mail" />
+              <br />
+              <button class="submit_btn" value="">submit</button>
+            </div>
+          </div>
+          <div class="text__string">
+            <input class="tex" type="text" placeholder="Type your message" />
+            <i class="fa-regular fa-face-smile"></i>
+            <i class="fa-solid fa-paperclip"></i>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/nav.js"></script>
+    <script src="js/cart_in.js"></script>
+    <script src="js/chat-bot.js"></script>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/0f1871673a.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

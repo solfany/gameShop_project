@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Board Write</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="js/jquery-3.6.3.min.js"></script>
+  <script src="js/chat-bot.js"></script>
+</head>
+
+<body>
+  <header>
+    <div id="nav">
+      <div id="nav__logo">
+        <a href="index.html"><video autoplay id="logo-mp4" muted height="110px" width="300px">
+          <source src="img/main_logo.mp4" type="video/mp4" />
+        </video></a>
+      </div>
+      <div id="nav__right">
+        <ul class="nav__list">
+          <li>
+            <a href="about-us.html">About Us</a>
+          </li>
+          <li>
+            <a href="products.html">Products</a>
+          </li>
+          <li>
+            <a href="contact.html">Contact Us</a>
+          </li>
+        </ul>
+        <ul id="nav__icon">
+          <input id="search-input" class="hidden" type="text" />
+          <li id="toggle-vibility">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          <li><a href="login.html"><i class="fa-solid fa-user-tie"></i></a></li>
+          </li>
+          <li id="cart-btn"><i class="fa-solid fa-cart-shopping"></i></li>
+        </ul>
+      </div>
+    </div>
+    <div id="lightoff" class="hidden"></div>
+    <div id="cart">
+      <div id="cart__top">
+        <i class="fa-solid fa-angles-right"></i>
+        <span>Cart</span>
+        <span class="padding">I</span>
+      </div>
+      <div id="cart__bottom">
+        <span>Cart is empty</span>
+      </div>
+    </div>
+  </header>
+  <main class="write_main">
+    <div class="write_top">글쓰기</div>
+    <form name="form" method="post" action="community.html">
+    <div class="write_title">
+      <label>제목</label>
+      <input class="write_title_text" type="text" name="title">
+    </div>
+
+    <!-- 포기 -->
+    <!-- <div class="write_btn">
+      <select class="text_select">
+        <option>본문</option>
+        <option>인용구</option>
+      </select>
+      <select>
+        <option>기본서체</option>
+        <option>나눔고딕</option>
+        <option>나눔명조</option>
+      </select>
+      <select>
+        <option>size</option>
+        <option>10</option>
+        <option>12</option>
+        <option>13</option>
+        <option>15</option>
+        <option>16</option>
+        <option>18</option>
+        <option>20</option>
+      </select>
+      <input class="text_btn_b" type="button" value="B">
+      <input class="text_btn_i" type="button" value="I">
+      <input class="text_btn_u" type="button" value="U">
+    </div> -->
+
+    <div class="write_text">
+      <label>내용</label>
+      <textarea class="write_middle" name="내용" style=" width: 800px; height: 500px;"></textarea>
+    </div>
+    <div class="file_drop">
+      <input type="file" accept="" class="file_dropbtn" />
+    </div>
+    <div class="write_bottom_btn">
+      <input class="write_bottom_btnsub" type="submit" value="취소하기" name="취소">
+      <input class="write_bottom_btnsub" type="submit" value="등록하기" name="등록">
+    </div>
+    </form>
+  </main>
+   <!-- 푸터 -->
+   <footer>
+    <div id="foot__top">
+      <div class="foot__upperbox">
+        <h1><i class="fa-brands fa-accusoft"></i> WAGs</h1>
+      </div>
+      <div class="foot__upperbox">
+        <ul>
+          <span class="foot__firstline">Products</span>
+          <li>Games</li>
+          <li>Consoles</li>
+          <li>Controllers</li>
+          <li>Accessories</li>
+        </ul>
+      </div>
+      <div class="foot__upperbox">
+        <ul>
+          <span class="foot__firstline">Store</span>
+          <li>
+            500 Terry Francois Street <br />
+            San Francisco, CA94158
+          </li>
+          <li>Mon-Fri: 9am - 9pm</li>
+          <li>info@mysite.com</li>
+          <li>123-456-7890</li>
+        </ul>
+      </div>
+      <div class="foot__upperbox">
+        <span class="foot__firstline">Policy</span>
+        <ul>
+          <li>Terms & Conditions</li>
+          <li>Shipping Policy</li>
+          <li>Privacy Policy</li>
+          <li>Cookie Policy</li>
+          <li>FAQ</li>
+        </ul>
+      </div>
+    </div>
+    <div class="line">&nbsp;</div>
+    <div id="foot__bottom">
+      <div class="foot__underbox">
+        <span id="pay">Payment Methods</span><br />
+        <img src="/img/pay.PNG" />
+      </div>
+      <div class="foot__underbox">
+        <span id="pay">Join the Community</span><br />
+        <img src="/img/join.png" />
+      </div>
+    </div>
+  </footer>
+    <!-- 푸터 -->
+
+    <!-- --chat-- -->
+    <div class="chat">
+      <button class="bot">
+        <i class="fa-solid fa-comment-dots"></i>
+      </button>
+      <div class="text__icon">
+        <div class="chat__top">
+          <img src="img/chat-logo.png" id="chat__top__img">
+          <p id="chat__top__p">
+            <span id="chat__top__name">WAGs</span><br>
+            <span id="chat__top__reply">We’ll reply as soon as we can.</span>
+          </p>
+          <button id="chat__top__btn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div id="chat__middle">
+          <div id="chat__new">
+            <span>NEW MESSAGE</span>
+          </div>
+          <div class="chat__message">
+            <div class="mk2">
+              Hey there, please leave your details so we can contact you even if
+              you are no longer on the site.
+            </div>
+          </div>
+          <div class="chat__message1">
+            <br />
+            <input class="mk" type="text" placeholder="Name" /><br>
+            <br />
+            <input class="mk" type="email" placeholder="E-mail" />
+            <br />
+            <button class="submit_btn" value="">submit</button>
+          </div>
+        </div>
+        <div class="text__string">
+          <input class="tex" type="text" placeholder="Type your message" />
+          <i class="fa-regular fa-face-smile"></i>
+          <i class="fa-solid fa-paperclip"></i>
+        </div>
+      </div>
+    </div>
+    <!-- --chat-- -->
+  
+  <script src="js/cart.js"></script>
+  <script src="js/nav.js"></script>
+    <script src="js/index-greeting.js"></script>
+  <script src="js/jquery-3.6.3.min.js"></script>
+  <script
+    src="https://kit.fontawesome.com/0f1871673a.js"
+    crossorigin="anonymous"
+  ></script>
+</body>
+
+</html>

@@ -1,0 +1,180 @@
+/* about us 전체 CSS */
+.about-us--main {
+    height: 2300px;
+    background: black;
+}
+/* Top 회사로고 CSS */
+.about-us-main { 
+    padding-top: 150px;
+    padding-bottom: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#FFF;
+}
+.part5-neon {
+      color: rgb(255, 255, 255);
+      text-shadow: 0 0 7px rgb(7, 7, 7), 0 0 10px rgb(0, 0, 0), 0 0 21px rgb(255, 255, 255), 0 0 42px rgb(140, 0, 255),
+        0 0 82px rgb(115, 0, 119);
+        font-size: 100px;
+    }
+/* Top 회사로고 CSS 끝*/
+
+ /* Top Sub WAGs 설명 CSS */
+ .introbox {
+      display:flex;
+      justify-content:space-around;
+      text-align: center;
+      white-space:nowrap;
+      padding-top: 30px;
+      width: 100%;
+      height: 280px;
+      background-size: 100%;
+      background-image: url("https://ak.picdn.net/shutterstock/videos/1020718915/thumb/1.jpg");
+ }
+ .introtext {
+      min-width:360px;
+      /* padding: 0px 180px 0px 180px; */
+      color: white;
+ }
+  /* Top Sub WAGs 설명 CSS 끝*/
+
+  /* middle 게임이미지/텍스트 CSS */
+.game_box {
+    display: flex;
+    justify-content: space-between;
+    /* flex와 space-between으로 슬라이드 이미지와 텍스트 부분 구분 */
+    width: 80%;
+    height: 400px;
+    padding: 10%;
+}
+.game_img {
+      float: left;
+      /* 여러장의 이미지 왼쪽으로 합치기 */
+      width: 600px;
+      height: 400px;
+      position: absolute;
+      animation: slide 20s infinite;
+      /* 슬라이드 20초 무한 반복 */
+      opacity: 0;
+      /* 불투명하게 설정하여 이미지 전환보여주기 */
+}
+.game_slide > img:nth-child(2){
+      animation-delay: 5s;
+}
+.game_slide > img:nth-child(3){
+      animation-delay: 10s;
+}
+.game_slide > img:nth-child(4){
+      animation-delay: 15s;
+}
+.game_slide > img:nth-child(5){
+      animation-delay: 20s;
+}
+/* slide 사진별로 시간 딜레이주기 */
+@keyframes slide {
+      10% {opacity: 1;}
+      20% {opacity: 1;}
+      30% {opacity: 1;}
+      40% {opacity: 0;}
+      /* 구간별 불투명도 설정 이미지 자연스럽게 넘기는 효과 */
+}
+.game_text {
+      display: flex; 
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      width: 40%;
+      height: 400px;
+      font-size: 20px;
+      color:#FFF;
+      box-sizing: border-box;
+      border: 5px;
+      border-style: solid;
+      --angle: 0deg;
+      border-image: linear-gradient(var(--angle),#5f034c, #9198e5) 1;
+      border-image-slice: 1;
+      animation: 3s rotate linear infinite;
+      /* 텍스트 board라인 그라데이션 무한반복 */
+}
+@keyframes rotate {
+      to {
+            --angle: 0deg;
+      }
+      from {
+            --angle: 360deg;
+      }
+}
+@property --angle {
+      syntax: '<angle>';
+      initial-value: 0deg;
+      inherits: false;
+}
+/* middle 게임이미지/텍스트 CSS 끝 */
+
+
+/* middle 장비이미지/텍스트 CSS 시작 */
+.item_box {
+      display: flex;
+      position: relative;
+      justify-content: space-between;
+      width: 80%;
+      height: 400px;
+      padding-top: 300px;
+  }
+.item_slide {
+      width: 600px;
+      overflow: hidden;
+}
+.item_img {
+      float: right;
+      width: 600px;
+      height: 400px;
+      padding-left: 12%;
+      position: absolute;
+      animation: slide 20s infinite;
+      opacity: 0;
+}
+.item_slide > img:nth-child(2){
+      animation-delay: 5s;
+}
+.item_slide > img:nth-child(3){
+      animation-delay: 10s;
+}
+.item_slide > img:nth-child(4){
+      animation-delay: 15s;
+}
+.item_slide > img:nth-child(5){
+      animation-delay: 20s;
+}
+@keyframes slide {
+      10% {opacity: 1;}
+      20% {opacity: 1;}
+      30% {opacity: 1;}
+      40% {opacity: 0;}
+}
+.item_text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      margin-left: 13%;
+      width: 40%;
+      font-size: 20px;
+      color:#FFF;
+      box-sizing: border-box;
+      border: 5px;
+      border-style: solid;
+      border-image: linear-gradient(var(--angle),#5f034c, #e7ef4b) 1;
+      border-image-slice: 1;
+      animation: 3s rotate linear infinite;
+}
+@keyframes rotate {
+      to {
+            --angle: 360deg;
+      }
+      from {
+            --angle: 0deg;
+      }
+}
+/* middle 장비이미지/텍스트 CSS 끝 */

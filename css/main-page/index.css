@@ -1,0 +1,117 @@
+#index__body {
+  font-family: "Source Sans Pro", "Manrope", sans-serif;
+  height: 380vh;
+  position: relative;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+#index__main {
+  margin-top: 100px;
+}
+.index__font {
+  list-style-type: none;
+  color: white;
+  font-size: 25px;
+}
+
+#video-background {
+  position: fixed;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -100;
+  transition: 0.5s linear;
+}
+/* #video-splash {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  z-index: 99;
+  position: fixed;
+  animation: hideSplashScreen 0.8s ease-in-out forwards;
+  animation-delay: 3s;
+} */
+
+@keyframes hideSplashScreen {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+#splash-screen {
+  background-color: black;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  animation: hideSplashScreen 0.4s ease-in-out forwards;
+  animation-delay: 4s;
+  z-index: 99;
+}
+#splash-img {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  z-index: 100;
+}
+#splash-load {
+  position:absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+#splash-load-div {
+  display: flex;
+  width: 500px;
+  justify-content: space-between;
+  align-items: center;
+}
+#splash-load h1 {
+  display: inline-block;
+  width: 500px;
+  font-size: 5em;
+  color: white;
+  font-weight: 700;
+  font-family: 'Montserrat';
+}
+.loader--text{
+  font-size: 2em;
+  color: white;
+  font-weight: 700;
+  font-family: 'Montserrat';
+}
+#splash-load i {
+  display: block;
+  font-size: 5em;
+  color: rgb(255, 255, 255);
+  z-index: 100;
+  transform: rotate(360deg);
+  animation-name: rotate_loading;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 10;
+  
+}
+@keyframes rotate_loading {
+  from{
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1차 프로젝트 회사 소개</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/chat-bot.js"></script>
+  </head>
+
+  <body>
+    <!-- 헤더  -->
+    <header>
+      <div id="nav">
+        <div id="nav__logo">
+          <a href="index.html"
+            ><img src="img/main-logo.png" width="360px" height="90px" alt=""
+          /></a>
+        </div>
+        <div id="nav__right">
+          <ul class="nav__list">
+            <li>
+              <a href="about-us.html">About Us</a>
+            </li>
+            <li>
+              <a href="products.html">Products</a>
+            </li>
+            <li>
+              <a href="community.html">Community</a>
+            </li>
+            <li>
+              <a href="contact.html">Contact Us</a>
+            </li>
+          </ul>
+          <ul id="nav__icon">
+            <input id="search-input" class="v-hidden" type="text" />
+            <li id="toggle-vibility">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </li>
+            <li id="cart-btn"><i class="fa-solid fa-cart-shopping"></i></li>
+            <li>
+              <a href="login.html"
+                ><i class="fa-solid fa-user-tie"></i
+                ><span id="greeting">Log-In</span></a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="nav_padding"></div>
+      </div>
+      <div id="lightoff" class="lightoff-hidden" onclick="lightOn()"></div>
+      <div id="cart">
+        <div id="cart__top">
+          <i class="fa-solid fa-angles-right"></i>
+          <span>Cart</span>
+          <span class="padding">i</span>
+        </div>
+        <div id="cart__container">
+          <span id="cart__empty"></span>
+          <ul id="cart__list"></ul>
+        </div>
+        <div id="cart__bottom">
+          <div id="cart__calculator">
+            <span id="cart__sum1">Total :</span>
+            <span id="cart__sum2">0.00</span>
+          </div>
+          <div id="cart__bottom__btndiv">
+            <a href="cart.html"
+              ><button id="cart__viewCart">View Cart</button></a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- 헤더  -->
+
+    <main class="about-us--main">
+      <div class="about-us-main">
+        <h1 class="part5-neon">WAGs</h1>
+        <!-- <h1 class="slide-in-w">W</h1>
+      <h1 class="slide-in-a">A</h1>
+      <h1 class="slide-in-g">G</h1>
+      <h1 class="slide-in-s">S</h1>  슬라이드 코드-->
+      </div>
+      <div class="introbox">
+        <div class="introtext">
+          <h1><b>With</b></h1>
+          <br />
+          <span
+            style="
+              color: rgb(249, 249, 249);
+              font-size: 20px;
+              font-weight: bold;
+            "
+          >
+            함께 소통하는 커뮤니케이션 </span
+          ><br /><br />
+          유저들이 모든 게임을<br />
+          즐길 수 있게<br />
+          함께 소통하고 즐기는 과정이<br />
+          가치를 만듭니다.
+        </div>
+        <div class="introtext">
+          <h1><b>Apex</b></h1>
+          <br />
+          <span
+            style="
+              color: rgb(249, 249, 249);
+              font-size: 20px;
+              font-weight: bold;
+            "
+          >
+            정상을 향한 열정 </span
+          ><br /><br />
+          항상 끊임없이 시도하며<br />
+          정상을 향해 달리는 열정으로<br />
+          도전을 멈추지 않습니다.
+        </div>
+        <div class="introtext">
+          <h1><b>Growth</b></h1>
+          <br />
+          <span
+            style="
+              color: rgb(249, 249, 249);
+              font-size: 20px;
+              font-weight: bold;
+            "
+          >
+            새로운 생각으로 성장 </span
+          ><br /><br />
+          빠르게 변화하는 시대에<br />
+          유저들과 함께 성장하는<br />
+          WAGS가 되겠습니다.
+        </div>
+      </div>
+      <div class="game_box">
+        <div class="game_slide">
+          <img
+            class="game_img"
+            src="https://cdn.akamai.steamstatic.com/steam/apps/601150/ss_d1e0b403f593f17ad195c5382a7788d71c6f406a.1920x1080.jpg?t=1675151951"
+          />
+          <img
+            class="game_img"
+            src="https://cdn.akamai.steamstatic.com/steam/apps/1085660/ss_afc1f202f7ab71adca7d1e503138d89c5689e716.1920x1080.jpg?t=1677611723"
+          />
+          <img
+            class="game_img"
+            src="https://cdn.akamai.steamstatic.com/steam/apps/1142710/ss_086d9d777d14d64c9e8bc1713b088381033dfeeb.1920x1080.jpg?t=1678143931"
+          />
+          <img
+            class="game_img"
+            src="https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt7129f3c39301ece2/61453642f725af79f53fc987/9212021_PatchNotes3.06_Kayo_Astra_1920x1080.jpg?auto=webp&disable=upscale&height=549"
+          />
+        </div>
+        <div class="game_text">
+          WAGs는 인디게임부터 대규모 게임 개발사의<br />
+          AAA게임들까지 전세계 모든 게임을 플레이하고<br />
+          게임에 대해 토론하고 즐길 수 있습니다.<br />
+          롤플레잉게임 레이싱게임 FPS게임 MMORPG등<br />
+          다양한 게임을 즐겨보세요.
+        </div>
+      </div>
+      <div class="item_box">
+        <div class="item_text">
+          각 게임에 최적화된 전용제품을 추천하여<br />
+          좀 더 쾌적한 환경, 즐겁게 게임을 즐기도록<br />
+          도와 드립니다.<br />
+          <br />
+        </div>
+        <div class="item_slide">
+          <img class="item_img" src="img/Playbox_XZ_Gold_Edition.webp" />
+          <img class="item_img" src="img/Echo_Headset.webp" />
+          <img class="item_img" src="img/Mach_Gaming_Chair.webp" />
+          <img class="item_img" src="img/Spartan_Mechanical_Keyboard.webp" />
+        </div>
+      </div>
+      <div class="chat">
+        <button class="bot">
+          <i class="fa-solid fa-comment-dots"></i>
+        </button>
+        <div class="text__icon">
+          <div class="chat__top">
+            <img src="img/chat-logo.png" id="chat__top__img" />
+            <p id="chat__top__p">
+              <span id="chat__top__name">WAGs</span><br />
+              <span id="chat__top__reply">We’ll reply as soon as we can.</span>
+            </p>
+            <button id="chat__top__btn">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          <div id="chat__middle">
+            <div id="chat__new">
+              <span>NEW MESSAGE</span>
+            </div>
+            <div class="chat__message">
+              <div class="mk2">
+                Hey there, please leave your details so we can contact you even
+                if you are no longer on the site.
+              </div>
+            </div>
+            <div class="chat__message1">
+              <br />
+              <input class="mk" type="text" placeholder="Name" /><br />
+              <br />
+              <input class="mk" type="email" placeholder="E-mail" />
+              <br />
+              <button class="submit_btn" value="">submit</button>
+            </div>
+          </div>
+          <div class="text__string">
+            <input class="tex" type="text" placeholder="Type your message" />
+            <i class="fa-regular fa-face-smile"></i>
+            <i class="fa-solid fa-paperclip"></i>
+          </div>
+        </div>
+      </div>
+      <!-- --chat-- -->
+    </main>
+    <!-- 푸터 -->
+    <footer>
+      <div id="foot__top">
+        <div class="foot__upperbox">
+          <h1><i class="fa-brands fa-accusoft"></i> WAGs</h1>
+        </div>
+        <div class="foot__upperbox">
+          <ul>
+            <span class="foot__firstline">Products</span>
+            <li>Games</li>
+            <li>Consoles</li>
+            <li>Controllers</li>
+            <li>Accessories</li>
+          </ul>
+        </div>
+        <div class="foot__upperbox">
+          <ul>
+            <span class="foot__firstline">Store</span>
+            <li>
+              500 Terry Francois Street <br />
+              San Francisco, CA94158
+            </li>
+            <li>Mon-Fri: 9am - 9pm</li>
+            <li>info@mysite.com</li>
+            <li>123-456-7890</li>
+          </ul>
+        </div>
+        <div class="foot__upperbox">
+          <span class="foot__firstline">Policy</span>
+          <ul>
+            <li>Terms & Conditions</li>
+            <li>Shipping Policy</li>
+            <li>Privacy Policy</li>
+            <li>Cookie Policy</li>
+            <li>FAQ</li>
+          </ul>
+        </div>
+      </div>
+      <div class="line">&nbsp;</div>
+      <div id="foot__bottom">
+        <div class="foot__underbox">
+          <span id="pay">Payment Methods</span><br />
+          <img src="../Project01/img/pay.PNG" />
+        </div>
+        <div class="foot__underbox">
+          <span id="pay">Join the Community</span><br />
+          <img src="../Project01/img/join.png" />
+        </div>
+      </div>
+    </footer>
+    <!-- 푸터 -->
+
+    <!-- --chat-- -->
+
+    <script src="js/cart.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/index-greeting.js"></script>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/0f1871673a.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+
+/* 전체적인 비율 값 세팅 */
+.login_body {
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif
+}
+
+/* 다음에도 기억하기 위치 조정태그 */
+#login-form-inline label {
+  padding-left: 10px;
+  margin: 0;
+  cursor: pointer
+}
+
+/* 입력 박스 사이즈 위치 조정 태그 */
+.login-input-field {
+  border-radius: 5px;
+  padding: 1%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  color: #4343ff;
+  font-size: 10%;
+  margin-bottom: 15px;
+}
+
+/* 입력 박스 사이즈 위치 조정 태그 2*/
+.login-input-text_pw{
+  border: none;
+  outline: none;
+  box-shadow: none;
+  font-size: 14px;
+  height: 4vh;
+}
+
+/* 소셜 로고 이미지 */
+.login-img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  position: relative
+}
+
+/* 소셜 로고 간격 조정 */
+.login-bordert:after {
+  content: "or connect with";
+  position: absolute;
+  top: -13px;
+  left: 40%;
+  background-color: #fff;
+  padding: 0px 8px
+}
+
+/* 배경 동영상 조정 태그  */
+.loing-video {
+  width: 100%;
+  height: 400%;
+  overflow: hidden;
+  margin: 0px auto;
+  position: relative;
+}
+
+
+.login_box {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+  #loing-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translate(-50%, -50%);
+  }
+
+/* 제목 css  */
+@keyframes pulsate {
+  0% {
+    /* Larger blur radius */
+    text-shadow: 0 0 4px #fff, 0 0 11px rgb(34, 2, 77), 0 0 19px #fff, 0 0 40px rgb(0, 174, 255), 0 0 80px rgb(2, 120, 255), 0 0 90px rgb(204, 0, 255), 0 0 100px rgb(183, 0, 255), 0 0 150px rgb(153, 76, 226);
+  }
+
+  80% {
+    /* Smaller blur radius */
+    text-shadow: 0 0 2px #fff, 0 0 4px rgb(255, 253, 253), 0 0 6px #fff, 0 0 10px rgb(0, 174, 255), 0 0 45px rgb(0, 174, 255), 0 0 55px rgb(140, 0, 255), 0 0 70px rgb(183, 0, 255), 0 0 80px rgb(0, 174, 255);
+  }
+}
+
+.login-h2 {
+  margin-top: 20px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  text-shadow: 50px;
+  animation: pulsate 1.51s ease-in-out infinite alternate;
+}
+
+
+/* 버튼 css */
+.login-custom-btn {
+  width: 100%;
+  height: 5.5vh;
+  color: #fff;
+  border-radius: 5px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.9s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+    7px 7px 20px 0px rgba(0, 0, 0, .1),
+    4px 4px 5px 0px rgba(0, 0, 0, .1);
+  outline: none;
+}
+
+.btn-8 {
+  background-color: #2cd3bd;
+  background-image: linear-gradient(315deg, #0104a8 0%, #9225e6 74%);
+  line-height: 42px;
+  padding: 0;
+  border: none;
+}
+
+.btn-8 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.btn-8:before,
+.btn-8:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 0;
+  background: #8c00f7;
+  transition: all 0.3s ease;
+}
+
+.btn-8:before {
+  height: 0%;
+  width: 2px;
+}
+
+.btn-8:after {
+  width: 0%;
+  height: 2px;
+}
+
+.btn-8:hover:before {
+  height: 100%;
+}
+
+.btn-8:hover:after {
+  width: 100%;
+}
+
+.btn-8:hover {
+  background: transparent;
+}
+
+.btn-8 span:hover {
+  color: #8f00fc;
+}
+
+.btn-8 span:before,
+.btn-8 span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background: #029bfa;
+  transition: all 0.3s ease;
+}
+
+.btn-8 span:before {
+  width: 2px;
+  height: 0%;
+}
+
+.btn-8 span:after {
+  height: 2px;
+  width: 0%;
+}
+
+.btn-8 span:hover:before {
+  height: 100%;
+}
+
+.btn-8 span:hover:after {
+  width: 100%;
+}
+
+.login-bordert {
+  margin: 3vh;
+  border-top: 1px solid #aaa;
+  position: relative
+}
+
+.login_social_icon {
+  margin: 1vw;
+  align-items: center;
+
+}
+
+.login_form {
+  margin-top: 50px;
+}
+
+/* 로그인박스 사이즈 */
+#login-container {
+  margin: 30px auto;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  width: 40vw;
+  height: 50vh;
+  border: 1px solid #7c7c7c;
+  background: #ffffff;
+  opacity: 0.8;
+  box-shadow: 20px 20px 20px rgb(3, 2, 2);
+}
+
+/* 비밀번호 찾기 위치 조정 태그 */
+#login-forgot {
+  min-width: 100px;
+  margin-left: auto;
+  text-decoration: none;
+  cursor: pointer;
+}
