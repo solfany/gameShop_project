@@ -3,7 +3,7 @@
 
 ## 데모 페이지 
 ![image](https://github.com/solfany/gameShop_project/assets/123814718/6d078b7c-d52e-44a5-b70d-2dcc13e170f1)
-[페모페이지 보기](https://solfany.github.io/gameShop_project/)
+[데모페이지 보기](https://solfany.github.io/gameShop_project/)
 
 
 ## 주제 선정 동기
